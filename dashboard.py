@@ -24,7 +24,7 @@ with colT2:
 
 
 # @@@ INDIA MAP ANALYSIS @@@
-t.write("# :blue[PhonePe India Map]")
+st.write("# :blue[PhonePe India Map]")
 c1,c2=st.columns(2)
 with c1:
     Year = st.selectbox(
@@ -104,7 +104,7 @@ fig_ch.update_geos(fitbounds="locations", visible=False,)
 #combining districts states and coropleth
 fig_ch.add_trace( fig.data[0])
 fig_ch.add_trace(fig1.data[0])
-s
+
 colT1,colT2 = st.columns([6,4])
 with colT1:
     st.plotly_chart(fig_ch, use_container_width=True)
