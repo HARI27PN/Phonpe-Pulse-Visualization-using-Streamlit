@@ -128,8 +128,9 @@ with colT2:
 # -----------------------------------------------FIGURE2 BARGRAPH------------------------------------------------------------------------
 st.info('**:blue[The bar graph below displays Indian states with the highest PhonePe transactions in increasing order for the same data.]**')
 Coropleth_Dataset = Coropleth_Dataset.sort_values(by=['Total_Transactions'])
+st.markdown("## :blue[str(year)+" Quarter-"+str(quarter)]")
 fig = px.bar(Coropleth_Dataset, x='state', y='Total_Transactions', title=str(year)+" Quarter-"+str(quarter))
-fig.update_layout(title_font=dict(size=27, family='Arial', color='red'))
+fig.update_layout(title_font=dict(size=27, color='blue'))
 st.plotly_chart(fig, use_container_width=True)
 
 # @@@ TRANSACTIONS ANALYSIS @@@
@@ -548,15 +549,15 @@ y=topst.sum().sort_values(by=['Total_Amount'], ascending=False)
 col1, col2, col3, col4= st.columns([2.5,2.5,2.5,2.5])
 with col1:
     rt=top_states_r[1:6]
-    st.markdown("#### :orange[Registered Users]")
+    st.markdown("#### :blue[Registered Users]")
     st.markdown(rt[[ 'State','Registered_Users']].style.hide(axis="index").to_html(), unsafe_allow_html=True)
 with col2:
     at=top_states_a[1:6]
-    st.markdown("#### :orange[PhonePeApp Openings]")
+    st.markdown("#### :blue[PhonePeApp Openings]")
     st.markdown(at[['State','AppOpenings']].style.hide(axis="index").to_html(), unsafe_allow_html=True)
 with col3:
-    st.markdown("#### :orange[Total Transactions]")
+    st.markdown("#### :blue[Total Transactions]")
     st.write(x[['Total_Transactions_count']][1:6])
 with col4:
-    st.markdown("#### :orange[Total Amount]")
+    st.markdown("#### :blue[Total Amount]")
     st.write(y['Total_Amount'][1:6])      
