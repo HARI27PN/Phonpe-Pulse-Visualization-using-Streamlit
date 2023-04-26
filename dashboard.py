@@ -104,7 +104,7 @@ fig_ch.update_geos(fitbounds="locations", visible=False,)
 #combining districts states and coropleth
 fig_ch.add_trace( fig.data[0])
 fig_ch.add_trace(fig1.data[0])
-st.write("### **:blue[PhonePe India Map]**")
+st.write("### **:green[PhonePe India Map]**")
 colT1,colT2 = st.columns([6,4])
 with colT1:
     st.plotly_chart(fig_ch, use_container_width=True)
@@ -113,8 +113,7 @@ with colT2:
     """
     Details of Map:
     - The darkness of each state's color represents the total transactions.
-    - The size of the circles on the map corresponds to the total transactions in each district.
-    - The bigger the circle, the higher the transactions.
+    - The size of the circles on the map corresponds to the total transactions in each district. The bigger the circle, the higher the transactions.
     - Hovering over the data on the map shows details like the total transactions and amount.
     """
     )
