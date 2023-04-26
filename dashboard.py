@@ -525,7 +525,8 @@ with tab3:
             """
             )
 
-st.write('# :red[TOP 3 STATES DATA]')
+# @@@ TOP 3 STATES DATA @@@
+st.write('# :red[TOP 5 STATES DATA]')
 c1,c2=st.columns(2)
 with c1:
     Year = st.selectbox(
@@ -546,16 +547,16 @@ x=topst.sum().sort_values(by=['Total_Transactions_count'], ascending=False)
 y=topst.sum().sort_values(by=['Total_Amount'], ascending=False)
 col1, col2, col3, col4= st.columns([2.5,2.5,2.5,2.5])
 with col1:
-    rt=top_states_r[1:4]
+    rt=top_states_r[1:6]
     st.markdown("#### :orange[Registered Users :bust_in_silhouette:]")
     st.markdown(rt[[ 'State','Registered_Users']].style.hide(axis="index").to_html(), unsafe_allow_html=True)
 with col2:
-    at=top_states_a[1:4]
+    at=top_states_a[1:6]
     st.markdown("#### :orange[PhonePeApp Openings:iphone:]")
     st.markdown(at[['State','AppOpenings']].style.hide(axis="index").to_html(), unsafe_allow_html=True)
 with col3:
     st.markdown("#### :orange[Total Transactions:currency_exchange:]")
-    st.write(x[['Total_Transactions_count']][1:4])
+    st.write(x[['Total_Transactions_count']][1:6])
 with col4:
     st.markdown("#### :orange[Total Amount :dollar:]")
-    st.write(y['Total_Amount'][1:4])      
+    st.write(y['Total_Amount'][1:6])      
