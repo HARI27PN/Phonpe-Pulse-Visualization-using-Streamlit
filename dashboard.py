@@ -7,6 +7,16 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 warnings.filterwarnings("ignore")
 st. set_page_config(layout="wide")
+st.markdown(
+    """
+    <style>
+    .reportview-container {
+        background: black;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 # DATASETS
 Data_Aggregated_Transaction_df= pd.read_csv(r'Data_Files/Data_Aggregated_Transaction_Table.csv')
