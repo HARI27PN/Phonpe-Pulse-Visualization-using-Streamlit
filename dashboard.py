@@ -20,7 +20,7 @@ Indian_States= pd.read_csv(r'Data_Files/Longitude_Latitude_State_Table.csv')
 colT1,colT2 = st.columns([2,8])
 with colT2:
     # st.title(':white[PhonePe Pulse Data Analysis]')
-    st.markdown("<h1 style='text-align: left; font-weight: bold; color: white; font-size: 66px;'>PhonePe Pulse Visualization Dashboard</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: left; font-weight: bold; color: white; font-size: 55px;'>PhonePe Pulse Visualization Dashboard</h1>", unsafe_allow_html=True)
 
 
 # @@@ INDIA MAP ANALYSIS @@@
@@ -126,7 +126,7 @@ with colT2:
     """
     )
 # -----------------------------------------------FIGURE2 BARGRAPH------------------------------------------------------------------------
-st.info('**:blue[The graph displays Indian states with the highest PhonePe transactions in increasing order.]**')
+st.info('**:blue[The bar graph below displays Indian states with the highest PhonePe transactions in increasing order.]**')
 Coropleth_Dataset = Coropleth_Dataset.sort_values(by=['Total_Transactions'])
 fig = px.bar(Coropleth_Dataset, x='state', y='Total_Transactions', title=str(year)+" Quarter-"+str(quarter))
 fig.update_layout(title_font=dict(size=20, family='Arial', color='blue'))
