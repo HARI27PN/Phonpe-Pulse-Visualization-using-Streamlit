@@ -134,7 +134,7 @@ with st.expander("See Bar graph for the same data"):
 
 # @@@ TRANSACTIONS ANALYSIS @@@
 
-st.write('# :green[TRANSACTIONS ANALYSIS :currency_exchange:]')
+st.write('# :green[TRANSACTIONS ANALYSIS]')
 tab1, tab2, tab3, tab4 = st.tabs(["STATE ANALYSIS", "DISTRICT ANALYSIS", "YEAR ANALYSIS", "OVERALL ANALYSIS"])
 # === T FIGURE1 STATE ANALYSIS ===
 with tab1:
@@ -548,15 +548,15 @@ y=topst.sum().sort_values(by=['Total_Amount'], ascending=False)
 col1, col2, col3, col4= st.columns([2.5,2.5,2.5,2.5])
 with col1:
     rt=top_states_r[1:6]
-    st.markdown("#### :orange[Registered Users :bust_in_silhouette:]")
+    st.markdown("#### :orange[Registered Users]")
     st.markdown(rt[[ 'State','Registered_Users']].style.hide(axis="index").to_html(), unsafe_allow_html=True)
 with col2:
     at=top_states_a[1:6]
-    st.markdown("#### :orange[PhonePeApp Openings:iphone:]")
+    st.markdown("#### :orange[PhonePeApp Openings]")
     st.markdown(at[['State','AppOpenings']].style.hide(axis="index").to_html(), unsafe_allow_html=True)
 with col3:
-    st.markdown("#### :orange[Total Transactions:currency_exchange:]")
+    st.markdown("#### :orange[Total Transactions]")
     st.write(x[['Total_Transactions_count']][1:6])
 with col4:
-    st.markdown("#### :orange[Total Amount :dollar:]")
+    st.markdown("#### :orange[Total Amount]")
     st.write(y['Total_Amount'][1:6])      
