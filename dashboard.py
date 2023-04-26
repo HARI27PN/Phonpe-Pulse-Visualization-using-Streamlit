@@ -8,17 +8,22 @@ from plotly.subplots import make_subplots
 warnings.filterwarnings("ignore")
 st.set_page_config(layout="wide", initial_sidebar_state="auto")
 # Set the background color
-st.markdown(
-    """
-    <style>
-    body {
-        background-color: #000000;
-        color: white;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+def set_background():
+    # Add CSS to change the background color
+    st.markdown(
+        """
+        <style>
+        .stApp {
+            background-color: black;
+            color: white;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
+# Call the function to set the background color
+set_background()
 
 # DATASETS
 Data_Aggregated_Transaction_df= pd.read_csv(r'Data_Files/Data_Aggregated_Transaction_Table.csv')
