@@ -20,7 +20,7 @@ Indian_States= pd.read_csv(r'Data_Files/Longitude_Latitude_State_Table.csv')
 colT1,colT2 = st.columns([2,8])
 with colT2:
     # st.title(':white[PhonePe Pulse Data Analysis]')
-    st.markdown("<h1 style='color: white;'>PhonePe Pulse Data Analysis</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: left; font-weight: bold; color: white; font-size: 36px;'>PhonePe Pulse Dashboard</h1>", unsafe_allow_html=True)
 
 
 # @@@ INDIA MAP ANALYSIS @@@
@@ -112,18 +112,18 @@ with colT2:
     st.info(
     """
     Details of Map:
-    - The darkness of the state color represents the total transactions
-    - The Size of the Circles represents the total transactions dictrict wise
-    - The bigger the Circle the higher the transactions
-    - Hover data will show the details like Total transactions, Total amount
+    - The darkness of each state's color represents the total transactions.
+    - The size of the circles on the map corresponds to the total transactions in each district.
+    - The bigger the circle, the higher the transactions.
+    - Hovering over the data on the map shows details like the total transactions and amount.
     """
     )
     st.info(
     """
     Important Observations:
-    - User can observe Transactions of PhonePe in both statewide and Districtwide.
-    - We can clearly see the states with highest transactions in the given year and quarter
-    - We get basic idea about transactions district wide
+    - Users can view PhonePe transactions both statewide and districtwise.
+    - The map clearly shows which states have the highest transactions during the given year and quarter.
+    - The map provides a basic understanding of transactions in different districts.
     """
     )
 # -----------------------------------------------FIGURE2 HIDDEN BARGRAPH------------------------------------------------------------------------
