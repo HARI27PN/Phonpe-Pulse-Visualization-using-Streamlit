@@ -125,11 +125,11 @@ with colT2:
     - The map provides a basic understanding of transactions in different districts.
     """
     )
-# -----------------------------------------------FIGURE2 HIDDEN BARGRAPH------------------------------------------------------------------------
+# -----------------------------------------------FIGURE2 BARGRAPH------------------------------------------------------------------------
+st.info('**:blue[The graph displays Indian states with the highest PhonePe transactions in increasing order.]**')
 Coropleth_Dataset = Coropleth_Dataset.sort_values(by=['Total_Transactions'])
-fig = px.bar(Coropleth_Dataset, x='state', y='Total_Transactions',title=str(year)+" Quarter-"+str(quarter))
+fig = px.bar(Coropleth_Dataset, x='state', y='Total_Transactions',title=str(year)+" Quarter-"+str(quarter),title_font=dict(size=25))
 st.plotly_chart(fig, use_container_width=True)
-st.info('**:blue[The above bar graph showing the increasing order of PhonePe Transactions according to the states of India, Here we can observe the top states with highest Transaction by looking at graph]**')
 
 # @@@ TRANSACTIONS ANALYSIS @@@
 
