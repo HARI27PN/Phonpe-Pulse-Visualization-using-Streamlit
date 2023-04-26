@@ -6,7 +6,7 @@ import pymysql
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 warnings.filterwarnings("ignore")
-st. set_page_config(layout="wide")
+st.set_page_config(layout="wide", initial_sidebar_state="auto")
 st.markdown(
     """
     <style>
