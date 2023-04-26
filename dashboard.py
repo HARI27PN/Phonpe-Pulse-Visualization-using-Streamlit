@@ -8,27 +8,6 @@ from plotly.subplots import make_subplots
 warnings.filterwarnings("ignore")
 st. set_page_config(layout="wide")
 
-# Getting Secrets from Streamlit Secret File
-# username=st.secrets['AWS_RDS_username']
-# password=st.secrets['AWS_RDS_password']
-# Endpoint=st.secrets['Endpoint']
-
-# # CONNECTED TO (AWS)Amazon-Web-Services ----> (RDS)Relational-Database-Service 
-# conn=pymysql.connect(
-#     host=Endpoint,
-#     user=username,
-#     password=password
-# )
-
-# # USING PhonepeDB I HAVE CREATED IN DATABASE-INSTANCE OF RDS
-# mycursor=conn.cursor()
-# sql='''USE PhonepeDB'''
-# mycursor.execute(sql)
-
-# # RETRIEVING DATA FROM CLOUD DATABASE
-# query = 'select * from Longitude_Latitude_State_Table'
-# Indian_States = pd.read_sql(query, con = conn)
-
 # DATASETS
 Data_Aggregated_Transaction_df= pd.read_csv(r'Data_Files/Data_Aggregated_Transaction_Table.csv')
 Data_Aggregated_User_Summary_df= pd.read_csv(r'Data_Files/Data_Aggregated_User_Summary_Table.csv')
@@ -40,18 +19,18 @@ Data_Map_User_Table= pd.read_csv(r'Data_Files/Data_Map_User_Table.csv')
 Indian_States= pd.read_csv(r'Data_Files/Longitude_Latitude_State_Table.csv')
 colT1,colT2 = st.columns([2,8])
 with colT2:
-    st.title(':orange[PhonePe Pulse Data Analysis:signal_strength:]')
+    st.title(':white[PhonePe Pulse Data Analysis]')
 
-#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ INDIA MAP ANALYSIS @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+# @@@ INDIA MAP ANALYSIS @@@
 
 c1,c2=st.columns(2)
 with c1:
     Year = st.selectbox(
-            'Please select the Year',
+            'Select the Year',
             ('2018', '2019', '2020','2021','2022'))
 with c2:
     Quarter = st.selectbox(
-            'Please select the Quarter',
+            'Select the Quarter',
             ('1', '2', '3','4'))
 year=int(Year)
 quarter=int(Quarter)
@@ -81,6 +60,7 @@ Total_Transaction=[]
 for i in Transaction_Coropleth_States['Total_Transactions_count']:
     Total_Transaction.append(i)
 Coropleth_Dataset['Total_Transactions']=Total_Transaction
+
 # -------------------------------------FIGURE1 INDIA MAP------------------------------------------------------------------
 #scatter plotting the states codes 
 Indian_States = Indian_States.sort_values(by=['state'], ascending=False)
@@ -151,11 +131,11 @@ with st.expander("See Bar graph for the same data"):
     st.plotly_chart(fig, use_container_width=True)
     st.info('**:blue[The above bar graph showing the increasing order of PhonePe Transactions according to the states of India, Here we can observe the top states with highest Transaction by looking at graph]**')
 
-#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ TRANSACTIONS ANALYSIS @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+# @@@ TRANSACTIONS ANALYSIS @@@
 
 st.write('# :green[TRANSACTIONS ANALYSIS :currency_exchange:]')
 tab1, tab2, tab3, tab4 = st.tabs(["STATE ANALYSIS", "DISTRICT ANALYSIS", "YEAR ANALYSIS", "OVERALL ANALYSIS"])
-#==================================================T FIGURE1 STATE ANALYSIS=======================================================
+# === T FIGURE1 STATE ANALYSIS ===
 with tab1:
     Data_Aggregated_Transaction=Data_Aggregated_Transaction_df.copy()
     Data_Aggregated_Transaction.drop(Data_Aggregated_Transaction.index[(Data_Aggregated_Transaction["State"] == "india")],axis=0,inplace=True)
@@ -209,7 +189,7 @@ with tab1:
         - We get basic idea about which mode of payments are either increasing or decreasing in a state
         """
         )
-#=============================================T FIGURE2 DISTRICTS ANALYSIS=============================================
+# === T FIGURE2 DISTRICTS ANALYSIS ===
 with tab2:
     col1, col2, col3= st.columns(3)
     with col1:
@@ -257,7 +237,7 @@ with tab2:
         - We can observe the leading distric in a state 
         """
         )
-#=============================================T FIGURE3 YEAR ANALYSIS===================================================
+# === T FIGURE3 YEAR ANALYSIS ===
 with tab3:
     #st.write('### :green[PaymentMode and Year]')
     col1, col2= st.columns(2)
@@ -304,7 +284,7 @@ with tab3:
         - Depending on the regional performance Phonepe can provide offers to particular place
         """
         )
-#=============================================T FIGURE4 OVERALL ANALYSIS=============================================
+# === FIGURE4 OVERALL ANALYSIS ===
 with tab4:    
     years=Data_Aggregated_Transaction.groupby('Year')
     years_List=Data_Aggregated_Transaction['Year'].unique()
@@ -329,12 +309,12 @@ with tab4:
         """
         )
 
-# @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ USER ANALYSIS @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+# @@@ USER ANALYSIS @@@
 
 st.write('# :orange[USERS DATA ANALYSIS ]')
 tab1, tab2, tab3, tab4 = st.tabs(["STATE ANALYSIS", "DISTRICT ANALYSIS","YEAR ANALYSIS","OVERALL ANALYSIS"])
 
-# =================================================U STATE ANALYSIS ========================================================
+# === U STATE ANALYSIS ===
 with tab1:
     st.write('### :blue[State & Userbase]')
     state = st.selectbox(
@@ -386,7 +366,7 @@ with tab1:
         - one can observe how user base is growing
         """
         )
-# ==================================================U DISTRICT ANALYSIS ====================================================
+# === U DISTRICT ANALYSIS ===
 with tab2:
     col1, col2, col3= st.columns(3)
     with col1:
@@ -439,7 +419,7 @@ with tab2:
         - We can observe the leading distric in a state 
         """
             )
-# ==================================================U YEAR ANALYSIS ========================================================
+# === U YEAR ANALYSIS ===
 with tab3:
     st.write('### :orange[Brand Share] ')
     col1, col2= st.columns(2)
@@ -500,7 +480,7 @@ with tab3:
                 color_continuous_scale="oranges",)
     with st.expander("See Bar graph for the same data"):
         st.plotly_chart(fig4,use_container_width=True) 
-# ===================================================U OVERALL ANALYSIS ====================================================
+# === U OVERALL ANALYSIS ===
 
     with tab4:
         years=Data_Aggregated_User_Summary_df.groupby('Year')
