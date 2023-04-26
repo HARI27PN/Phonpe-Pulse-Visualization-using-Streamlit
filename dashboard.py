@@ -24,7 +24,7 @@ with colT2:
 
 
 # @@@ INDIA MAP ANALYSIS @@@
-st.write("# :blue[PHONEPE INDIA MAP]")
+st.write("# :orange[PHONEPE INDIA MAP]")
 c1,c2=st.columns(2)
 with c1:
     Year = st.selectbox(
@@ -129,12 +129,12 @@ with colT2:
 st.info('**:blue[The bar graph below displays Indian states with the highest PhonePe transactions in increasing order for the same data.]**')
 Coropleth_Dataset = Coropleth_Dataset.sort_values(by=['Total_Transactions'])
 fig = px.bar(Coropleth_Dataset, x='state', y='Total_Transactions', title=str(year)+" Quarter-"+str(quarter))
-fig.update_layout(title_font=dict(size=27, family='Arial', color='blue'))
+fig.update_layout(title_font=dict(size=27, family='Arial', color='red'))
 st.plotly_chart(fig, use_container_width=True)
 
 # @@@ TRANSACTIONS ANALYSIS @@@
 
-st.write('# :green[TRANSACTIONS ANALYSIS]')
+st.write('# :orange[TRANSACTIONS ANALYSIS]')
 tab1, tab2, tab3, tab4 = st.tabs(["STATE ANALYSIS", "DISTRICT ANALYSIS", "YEAR ANALYSIS", "OVERALL ANALYSIS"])
 # === T FIGURE1 STATE ANALYSIS ===
 with tab1:
@@ -526,7 +526,7 @@ with tab3:
             )
 
 # @@@ TOP 3 STATES DATA @@@
-st.write('# :red[TOP 5 STATES DATA]')
+st.write('# :orange[TOP 5 STATES DATA]')
 c1,c2=st.columns(2)
 with c1:
     Year = st.selectbox(
