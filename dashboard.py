@@ -91,7 +91,7 @@ fig1=px.scatter_geo(Scatter_Geo_Dataset,
                     hover_data=["State", "Total_Amount","Total_Transactions","Year_Quarter"],
                     title='District',
                     size_max=22,)
-fig1.update_traces(marker=dict(color="rebeccapurple" ,line_width=1))    #rebeccapurple
+fig1.update_traces(marker=dict(color="forestgreen" ,line_width=1))    #rebeccapurple
 #coropleth mapping india
 fig_ch = px.choropleth(
                     Coropleth_Dataset,
@@ -104,7 +104,7 @@ fig_ch.update_geos(fitbounds="locations", visible=False,)
 #combining districts states and coropleth
 fig_ch.add_trace( fig.data[0])
 fig_ch.add_trace(fig1.data[0])
-st.write("### **:green[PhonePe India Map]**")
+st.write("### **:blue[PhonePe India Map]**")
 colT1,colT2 = st.columns([6,4])
 with colT1:
     st.plotly_chart(fig_ch, use_container_width=True)
