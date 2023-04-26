@@ -24,7 +24,7 @@ with colT2:
 
 
 # @@@ INDIA MAP ANALYSIS @@@
-st.write("# :blue[PhonePe India Map]")
+st.write("# :blue[PHONPE INDIA MAP]")
 c1,c2=st.columns(2)
 with c1:
     Year = st.selectbox(
