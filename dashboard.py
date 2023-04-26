@@ -178,16 +178,17 @@ with tab1:
         st.info(
         """
         Details of BarGraph:
-        - This entire data belongs to state selected by you
-        - X Axis is basically all years with all quarters 
-        - Y Axis represents total transactions in selected mode        
+        - The data pertains to a specific state selected by you.
+        - The X axis represents all years with all quarters.
+        - The Y axis represents the total transactions in the selected mode.      
         """
         )
         st.info(
         """
         Important Observations:
-        - User can observe the pattern of payment modes in a State 
-        - We get basic idea about which mode of payments are either increasing or decreasing in a state
+        - The data visualizes the pattern of payment modes in a state over time.
+        - Users can analyze the Y-axis data to understand which modes of payments are increasing or decreasing in the state. An upward trend in the Y-axis data for a particular payment mode indicates an increase in usage. A downward trend in the Y-axis data for a particular payment mode indicates a decrease in usage.
+        - Observing these patterns over time can provide insights into the changing payment behavior of people in the state.
         """
         )
 # === T FIGURE2 DISTRICTS ANALYSIS ===
@@ -521,12 +522,11 @@ with tab3:
             """
             Important Observation:
             -  We can see that the Registered Users and App openings are increasing year by year
-            
             """
             )
 
 # @@@ TOP 3 STATES DATA @@@
-st.write('# :orange[TOP 5 STATES DATA]')
+st.write('# :orange[TOP 5 STATE-WISE DATA]')
 c1,c2=st.columns(2)
 with c1:
     Year = st.selectbox(
@@ -552,7 +552,7 @@ with col1:
     st.markdown(rt[[ 'State','Registered_Users']].style.hide(axis="index").to_html(), unsafe_allow_html=True)
 with col2:
     at=top_states_a[1:6]
-    st.markdown("#### :blue[PhonePeApp Openings]")
+    st.markdown("#### :blue[PhonePe App Openings]")
     st.markdown(at[['State','AppOpenings']].style.hide(axis="index").to_html(), unsafe_allow_html=True)
 with col3:
     st.markdown("#### :blue[Total Transactions]")
