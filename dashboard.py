@@ -7,11 +7,13 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 warnings.filterwarnings("ignore")
 st.set_page_config(layout="wide", initial_sidebar_state="auto")
+# Set the background color
 st.markdown(
     """
     <style>
-    .reportview-container {
-        background: black;
+    body {
+        background-color: #000000;
+        color: white;
     }
     </style>
     """,
