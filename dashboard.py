@@ -128,9 +128,8 @@ with colT2:
 # -----------------------------------------------FIGURE2 HIDDEN BARGRAPH------------------------------------------------------------------------
 Coropleth_Dataset = Coropleth_Dataset.sort_values(by=['Total_Transactions'])
 fig = px.bar(Coropleth_Dataset, x='state', y='Total_Transactions',title=str(year)+" Quarter-"+str(quarter))
-with st.expander("See Bar graph for the same data"):
-    st.plotly_chart(fig, use_container_width=True)
-    st.info('**:blue[The above bar graph showing the increasing order of PhonePe Transactions according to the states of India, Here we can observe the top states with highest Transaction by looking at graph]**')
+st.plotly_chart(fig, use_container_width=True)
+st.info('**:blue[The above bar graph showing the increasing order of PhonePe Transactions according to the states of India, Here we can observe the top states with highest Transaction by looking at graph]**')
 
 # @@@ TRANSACTIONS ANALYSIS @@@
 
