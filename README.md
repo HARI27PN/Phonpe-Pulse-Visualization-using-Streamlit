@@ -1,6 +1,11 @@
 # Phonpe-Pulse-Visualization-using-Streamlit
 
-App Link - https://hari27pn-phonpe-pulse-visualization-using-stre-dashboard-9pzhla.streamlit.app/
+Sreamlit App Link ⬇️
+
+https://hari27pn-phonpe-pulse-visualization-using-stre-dashboard-9pzhla.streamlit.app/
+
+Refer to the guidelines⬇️
+https://drive.google.com/file/d/1VBRecdnRpbutknJLNZQC4f1bc1eKWdsw/view?usp=share_link
 
 This project is a simple data visualization app built using Streamlit to visualize the pulse of transactions happening in the Phonpe wallet. The data is fetched from the Phonpe developer API and visualized using a line chart.
 
