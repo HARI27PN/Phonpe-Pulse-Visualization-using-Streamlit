@@ -126,12 +126,13 @@ with colT1:
     st.plotly_chart(fig_ch, use_container_width=True)
 with colT2:
     st.info(
-    <div style="color: yellow">
     """
+    <div style="color: yellow">
     Details of Map:
     - The darkness of each state's color represents the total transactions.
     - The size of the circles on the map corresponds to the total transactions in each district. The bigger the circle, the higher the transactions.
     - Hovering over the data on the map shows details like the total transactions and amount.
+    </div>
     """
     )
     st.info(
@@ -141,6 +142,7 @@ with colT2:
     - Users can view PhonePe transactions both statewide and districtwise.
     - The map clearly shows which states have the highest transactions during the given year and quarter.
     - The map provides a basic understanding of transactions in different districts.
+    </div>
     """
     )
 # -----------------------------------------------FIGURE2 BARGRAPH------------------------------------------------------------------------
