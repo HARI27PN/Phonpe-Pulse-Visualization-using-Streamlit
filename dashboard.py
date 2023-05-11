@@ -21,7 +21,6 @@ def set_background():
         """,
         unsafe_allow_html=True
     )
-
 # Call the function to set the background color
 set_background()
 
