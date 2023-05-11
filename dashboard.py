@@ -16,7 +16,7 @@ def set_background():
         <style>
         .stApp {
             background-color: #350D65;
-            color: black;
+            color: magneta;
         }
         </style>
         """,
@@ -35,7 +35,7 @@ Data_Map_Transaction_df = pd.read_csv(r'Data_Files/Data_Map_Transaction_Table.cs
 Data_Map_User_Table= pd.read_csv(r'Data_Files/Data_Map_User_Table.csv')
 Indian_States= pd.read_csv(r'Data_Files/Longitude_Latitude_State_Table.csv')
 
-st.markdown("<h1 style='text-align: left; font-weight: bold; color: black; font-size: 55px;'>PhonePe Pulse Visualization Dashboard</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: left; font-weight: bold; color: #ffffff; font-size: 55px;'>PhonePe Pulse Visualization Dashboard</h1>", unsafe_allow_html=True)
   
     
 # INDIA MAP ANALYSIS
