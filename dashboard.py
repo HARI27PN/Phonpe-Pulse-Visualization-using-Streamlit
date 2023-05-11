@@ -127,6 +127,7 @@ with colT1:
 with colT2:
     st.info(
     """
+    <div style="color: yellow">
     Details of Map:
     - The darkness of each state's color represents the total transactions.
     - The size of the circles on the map corresponds to the total transactions in each district. The bigger the circle, the higher the transactions.
@@ -135,6 +136,7 @@ with colT2:
     )
     st.info(
     """
+    <div style="color: yellow">
     Important Observations:
     - Users can view PhonePe transactions both statewide and districtwise.
     - The map clearly shows which states have the highest transactions during the given year and quarter.
@@ -142,7 +144,7 @@ with colT2:
     """
     )
 # -----------------------------------------------FIGURE2 BARGRAPH------------------------------------------------------------------------
-st.info('**:blue[The bar graph below displays Indian states with the highest PhonePe transactions in increasing order for the same data.]**')
+st.info('**:red[The bar graph below displays Indian states with the highest PhonePe transactions in increasing order for the same data.]**')
 Coropleth_Dataset = Coropleth_Dataset.sort_values(by=['Total_Transactions'])
 fig = px.bar(Coropleth_Dataset, x='state', y='Total_Transactions', title=str(year)+" Quarter-"+str(quarter))
 fig.update_layout(title_font=dict(size=27, color='blue'))
