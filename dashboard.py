@@ -126,8 +126,8 @@ with colT1:
     st.plotly_chart(fig_ch, use_container_width=True)
 with colT2:
     st.info(
-    """
     <div style="color: yellow">
+    """
     Details of Map:
     - The darkness of each state's color represents the total transactions.
     - The size of the circles on the map corresponds to the total transactions in each district. The bigger the circle, the higher the transactions.
