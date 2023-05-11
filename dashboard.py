@@ -51,6 +51,7 @@ with c2:
             'Select the Quarter',
             ('Q1 (Jan-Mar)', 'Q2 (Apr-Jun)', 'Q3 (Jul-Sep)','Q4 (Oct-Dec)'))
 year=int(Year)
+string_value = Quarter
 quarter= int(''.join(filter(str.isdigit, string_value)))
 Transaction_scatter_districts=Data_Map_Transaction_df.loc[(Data_Map_Transaction_df['Year'] == year ) & (Data_Map_Transaction_df['Quarter']==quarter) ].copy()
 Transaction_Coropleth_States=Transaction_scatter_districts[Transaction_scatter_districts["State"] == "india"]
