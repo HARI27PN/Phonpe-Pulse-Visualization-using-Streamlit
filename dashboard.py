@@ -568,7 +568,7 @@ top_states=Data_Map_User_df.loc[(Data_Map_User_df['Year'] == int(Year)) & (Data_
 top_states_r = top_states.sort_values(by=['Registered_Users'], ascending=False)
 top_states_a = top_states.sort_values(by=['AppOpenings'], ascending=False) 
 
-top_states_T=Data_Aggregated_Transaction_df.loc[(Data_Aggregated_Transaction_df['Year'] == int(Year)) & (Data_Aggregated_Transaction_df['Quarter'] ==int(Quarter))]
+top_states_T=Data_Aggregated_Transaction_df.loc[(Data_Aggregated_Transaction_df['Year'] == int(Year)) & (Data_Aggregated_Transaction_df['Quarter'] ==quarter)]
 topst=top_states_T.groupby('State')
 x=topst.sum().sort_values(by=['Total_Transactions_count'], ascending=False)
 y=topst.sum().sort_values(by=['Total_Amount'], ascending=False)
