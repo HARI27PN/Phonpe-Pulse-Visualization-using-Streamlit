@@ -22,7 +22,7 @@ def set_background():
         """,
         unsafe_allow_html=True
     )
-# Call the function to set the background color
+# Call the function to set the background color 6739B7
 set_background()
 
 # DATASETS
