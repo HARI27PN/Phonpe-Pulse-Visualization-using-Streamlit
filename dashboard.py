@@ -15,7 +15,7 @@ def set_background():
         """
         <style>
         .stApp {
-            background-color: #6739B7;
+            background-color: #371560;
             color: magneta;
         }
         </style>
