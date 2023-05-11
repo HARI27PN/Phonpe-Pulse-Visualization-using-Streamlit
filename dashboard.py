@@ -121,7 +121,7 @@ fig_ch.update_geos(fitbounds="locations", visible=False,)
 fig_ch.add_trace( fig.data[0])
 fig_ch.add_trace(fig1.data[0])
 
-colT1,colT2 = st.columns([6,4])
+colT1,colT2 = st.columns([5,5])
 with colT1:
     st.plotly_chart(fig_ch, use_container_width=True)
 with colT2:
