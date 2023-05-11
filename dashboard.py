@@ -127,23 +127,19 @@ with colT1:
 with colT2:
     st.info(
     """
-    <div style="color: yellow">
     Details of Map:
     - The darkness of each state's color represents the total transactions.
     - The size of the circles on the map corresponds to the total transactions in each district. The bigger the circle, the higher the transactions.
     - Hovering over the data on the map shows details like the total transactions and amount.
-    </div>
-    """,unsafe_allow_html=True
+    """
     )
     st.info(
     """
-    <div style="color: yellow">
     Important Observations:
     - Users can view PhonePe transactions both statewide and districtwise.
     - The map clearly shows which states have the highest transactions during the given year and quarter.
     - The map provides a basic understanding of transactions in different districts.
-    </div>
-    """,unsafe_allow_html=True
+    """
     )
 # -----------------------------------------------FIGURE2 BARGRAPH------------------------------------------------------------------------
 st.info('**:red[The bar graph below displays Indian states with the highest PhonePe transactions in increasing order for the same data.]**')
