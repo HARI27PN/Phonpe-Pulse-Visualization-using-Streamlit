@@ -143,7 +143,7 @@ with colT2:
     - The map clearly shows which states have the highest transactions during the given year and quarter.
     - The map provides a basic understanding of transactions in different districts.
     </div>
-    """.unsafe_allow_html=True
+    """,unsafe_allow_html=True
     )
 # -----------------------------------------------FIGURE2 BARGRAPH------------------------------------------------------------------------
 st.info('**:red[The bar graph below displays Indian states with the highest PhonePe transactions in increasing order for the same data.]**')
