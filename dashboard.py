@@ -7,6 +7,7 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 warnings.filterwarnings("ignore")
 st.set_page_config(layout="wide", initial_sidebar_state="auto")
+
 # Set the background color
 def set_background():
     # Add CSS to change the background color
@@ -38,8 +39,8 @@ with colT2:
     # st.title(':white[PhonePe Pulse Data Analysis]')
     st.markdown("<h1 style='text-align: left; font-weight: bold; color: black; font-size: 55px;'>PhonePe Pulse Visualization Dashboard</h1>", unsafe_allow_html=True)
 
-
-# @@@ INDIA MAP ANALYSIS @@@
+    
+# INDIA MAP ANALYSIS
 st.write("# :orange[PHONEPE INDIA MAP]")
 c1,c2=st.columns(2)
 with c1:
@@ -148,7 +149,8 @@ fig = px.bar(Coropleth_Dataset, x='state', y='Total_Transactions', title=str(yea
 fig.update_layout(title_font=dict(size=27, color='blue'))
 st.plotly_chart(fig, use_container_width=True)
 
-# @@@ TRANSACTIONS ANALYSIS @@@
+
+# TRANSACTIONS ANALYSIS
 
 st.write('# :orange[TRANSACTIONS ANALYSIS]')
 tab1, tab2, tab3, tab4 = st.tabs(["STATE ANALYSIS", "DISTRICT ANALYSIS", "YEAR ANALYSIS", "OVERALL ANALYSIS"])
@@ -327,7 +329,8 @@ with tab4:
         """
         )
 
-# @@@ USER ANALYSIS @@@
+        
+# USER ANALYSIS
 
 st.write('# :orange[USERS DATA ANALYSIS ]')
 tab1, tab2, tab3, tab4 = st.tabs(["STATE ANALYSIS", "DISTRICT ANALYSIS","YEAR ANALYSIS","OVERALL ANALYSIS"])
@@ -498,8 +501,8 @@ with tab3:
                 color_continuous_scale="oranges",)
     with st.expander("See Bar graph for the same data"):
         st.plotly_chart(fig4,use_container_width=True) 
+        
 # === U OVERALL ANALYSIS ===
-
     with tab4:
         years=Data_Aggregated_User_Summary_df.groupby('Year')
         years_List=Data_Aggregated_User_Summary_df['Year'].unique()
@@ -541,7 +544,9 @@ with tab3:
             """
             )
 
-# @@@ TOP 3 STATES DATA @@@
+            
+# TOP 3 STATES DATA
+
 st.write('# :orange[TOP 5 STATE-WISE DATA]')
 c1,c2=st.columns(2)
 with c1:
