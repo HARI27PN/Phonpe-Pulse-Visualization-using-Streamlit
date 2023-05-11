@@ -37,9 +37,7 @@ Indian_States= pd.read_csv(r'Data_Files/Longitude_Latitude_State_Table.csv')
 
 # st.title(':white[PhonePe Pulse Data Analysis]')
 st.markdown("<h1 style='text-align: left; font-weight: bold; color: black; font-size: 55px;'>PhonePe Pulse Visualization Dashboard</h1>", unsafe_allow_html=True)
- 
-colT1,colT2 = st.columns([2,8])
-# with colT2:   
+  
     
 # INDIA MAP ANALYSIS
 st.write("# :orange[PHONEPE INDIA MAP]")
