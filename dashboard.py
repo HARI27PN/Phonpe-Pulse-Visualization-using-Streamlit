@@ -35,7 +35,6 @@ Data_Map_Transaction_df = pd.read_csv(r'Data_Files/Data_Map_Transaction_Table.cs
 Data_Map_User_Table= pd.read_csv(r'Data_Files/Data_Map_User_Table.csv')
 Indian_States= pd.read_csv(r'Data_Files/Longitude_Latitude_State_Table.csv')
 
-# st.title(':white[PhonePe Pulse Data Analysis]')
 st.markdown("<h1 style='text-align: left; font-weight: bold; color: black; font-size: 55px;'>PhonePe Pulse Visualization Dashboard</h1>", unsafe_allow_html=True)
   
     
@@ -168,15 +167,15 @@ with tab1:
     with col2:
         state = st.selectbox(
         'Please select the State',
-        ('andaman-&-nicobar-islands', 'andhra-pradesh', 'arunachal-pradesh',
+        ('andaman & nicobar islands', 'andhra pradesh', 'arunachal pradesh',
         'assam', 'bihar', 'chandigarh', 'chhattisgarh',
-        'dadra-&-nagar-haveli-&-daman-&-diu', 'delhi', 'goa', 'gujarat',
-        'haryana', 'himachal-pradesh', 'jammu-&-kashmir',
+        'dadra & nagar haveli & daman & diu', 'delhi', 'goa', 'gujarat',
+        'haryana', 'himachal pradesh', 'jammu & kashmir',
         'jharkhand', 'karnataka', 'kerala', 'ladakh', 'lakshadweep',
-        'madhya-pradesh', 'maharashtra', 'manipur', 'meghalaya', 'mizoram',
+        'madhya pradesh', 'maharashtra', 'manipur', 'meghalaya', 'mizoram',
         'nagaland', 'odisha', 'puducherry', 'punjab', 'rajasthan',
-        'sikkim', 'tamil-nadu', 'telangana', 'tripura', 'uttar-pradesh',
-        'uttarakhand', 'west-bengal'),key='b')
+        'sikkim', 'tamil nadu', 'telangana', 'tripura', 'uttar pradesh',
+        'uttarakhand', 'west bengal'),key='b')
     State= state
     Year_List=[2018,2019,2020,2021,2022]
     Mode=mode
