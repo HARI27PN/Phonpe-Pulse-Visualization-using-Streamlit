@@ -49,7 +49,7 @@ with c1:
 with c2:
     Quarter = st.selectbox(
             'Select the Quarter',
-            ('1', '2', '3','4'))
+            ('Q1 (Jan-Mar)', 'Q2 (Apr-Jun)', 'Q3 (Jul-Sep)','Q4 (Oct-Dec)'))
 year=int(Year)
 quarter=int(Quarter)
 Transaction_scatter_districts=Data_Map_Transaction_df.loc[(Data_Map_Transaction_df['Year'] == year ) & (Data_Map_Transaction_df['Quarter']==quarter) ].copy()
