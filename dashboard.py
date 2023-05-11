@@ -168,15 +168,15 @@ with tab1:
     with col2:
         state = st.selectbox(
         'Please select the State',
-        ('andaman-&-nicobar-islands', 'andhra-pradesh', 'arunachal-pradesh',
-        'assam', 'bihar', 'chandigarh', 'chhattisgarh',
-        'dadra-&-nagar-haveli-&-daman-&-diu', 'delhi', 'goa', 'gujarat',
-        'haryana', 'himachal-pradesh', 'jammu-&-kashmir',
-        'jharkhand', 'karnataka', 'kerala', 'ladakh', 'lakshadweep',
-        'madhya-pradesh', 'maharashtra', 'manipur', 'meghalaya', 'mizoram',
-        'nagaland', 'odisha', 'puducherry', 'punjab', 'rajasthan',
-        'sikkim', 'tamil-nadu', 'telangana', 'tripura', 'uttar-pradesh',
-        'uttarakhand', 'west-bengal'),key='b')
+        ('Andaman & Nicobar Islands', 'Andhra Pradesh', 'Arunachal Pradesh',
+        'Assam', 'Bihar', 'Chandigarh', 'Chhattisgarh',
+        'Dadra & Nagar Haveli & Daman & Diu', 'Delhi', 'Goa', 'Gujarat',
+        'Haryana', 'Himachal Pradesh', 'Jammu & Kashmir',
+        'Jharkhand', 'Karnataka', 'Kerala', 'Ladakh', 'Lakshadweep',
+        'Madhya Pradesh', 'Maharashtra', 'Manipur', 'Meghalaya', 'Mizoram',
+        'Nagaland', 'Odisha', 'Puducherry', 'Punjab', 'Rajasthan',
+        'Sikkim', 'Tamil Nadu', 'Telangana', 'Tripura', 'Uttar Pradesh',
+        'Uttarakhand', 'West Bengal'),key='b')
     State= state
     Year_List=[2018,2019,2020,2021,2022]
     Mode=mode
@@ -219,21 +219,23 @@ with tab2:
     with col2:
         state = st.selectbox(
         'Please select the State',
-        ('andaman-&-nicobar-islands', 'andhra-pradesh', 'arunachal-pradesh',
-        'assam', 'bihar', 'chandigarh', 'chhattisgarh',
-        'dadra-&-nagar-haveli-&-daman-&-diu', 'delhi', 'goa', 'gujarat',
-        'haryana', 'himachal-pradesh', 'jammu-&-kashmir',
-        'jharkhand', 'karnataka', 'kerala', 'ladakh', 'lakshadweep',
-        'madhya-pradesh', 'maharashtra', 'manipur', 'meghalaya', 'mizoram',
-        'nagaland', 'odisha', 'puducherry', 'punjab', 'rajasthan',
-        'sikkim', 'tamil-nadu', 'telangana', 'tripura', 'uttar-pradesh',
-        'uttarakhand', 'west-bengal'),key='dk')
+        ('Andaman & Nicobar Islands', 'Andhra Pradesh', 'Arunachal Pradesh',
+        'Assam', 'Bihar', 'Chandigarh', 'Chhattisgarh',
+        'Dadra & Nagar Haveli & Daman & Diu', 'Delhi', 'Goa', 'Gujarat',
+        'Haryana', 'Himachal Pradesh', 'Jammu & Kashmir',
+        'Jharkhand', 'Karnataka', 'Kerala', 'Ladakh', 'Lakshadweep',
+        'Madhya Pradesh', 'Maharashtra', 'Manipur', 'Meghalaya', 'Mizoram',
+        'Nagaland', 'Odisha', 'Puducherry', 'Punjab', 'Rajasthan',
+        'Sikkim', 'Tamil Nadu', 'Telangana', 'Tripura', 'Uttar Pradesh',
+        'Uttarakhand', 'West Bengal'),key='dk')
     with col3:
         Quarter = st.selectbox(
             'Please select the Quarter',
-            ('1', '2', '3','4'),key='qwe')
+            ('Q1 (Jan-Mar)', 'Q2 (Apr-Jun)', 'Q3 (Jul-Sep)','Q4 (Oct-Dec)'),key='qwe')
+    string_value = Quarter
+    quarter= int(''.join(filter(str.isdigit, string_value)))
     districts=Data_Map_Transaction_df.loc[(Data_Map_Transaction_df['State'] == state ) & (Data_Map_Transaction_df['Year']==int(Year))
-                                          & (Data_Map_Transaction_df['Quarter']==int(Quarter))]
+                                          & (Data_Map_Transaction_df['Quarter']==quarter)]
     l=len(districts)    
     fig = px.bar(districts, x='Place_Name', y='Total_Transactions_count',color="Total_Transactions_count",
                  color_continuous_scale="Viridis")   
@@ -340,15 +342,15 @@ with tab1:
     st.write('### :blue[State & Userbase]')
     state = st.selectbox(
         'Please select the State',
-        ('andaman-&-nicobar-islands', 'andhra-pradesh', 'arunachal-pradesh',
-        'assam', 'bihar', 'chandigarh', 'chhattisgarh',
-        'dadra-&-nagar-haveli-&-daman-&-diu', 'delhi', 'goa', 'gujarat',
-        'haryana', 'himachal-pradesh', 'jammu-&-kashmir',
-        'jharkhand', 'karnataka', 'kerala', 'ladakh', 'lakshadweep',
-        'madhya-pradesh', 'maharashtra', 'manipur', 'meghalaya', 'mizoram',
-        'nagaland', 'odisha', 'puducherry', 'punjab', 'rajasthan',
-        'sikkim', 'tamil-nadu', 'telangana', 'tripura', 'uttar-pradesh',
-        'uttarakhand', 'west-bengal'),key='W')
+        ('Andaman & Nicobar Islands', 'Andhra Pradesh', 'Arunachal Pradesh',
+        'Assam', 'Bihar', 'Chandigarh', 'Chhattisgarh',
+        'Dadra & Nagar Haveli & Daman & Diu', 'Delhi', 'Goa', 'Gujarat',
+        'Haryana', 'Himachal Pradesh', 'Jammu & Kashmir',
+        'Jharkhand', 'Karnataka', 'Kerala', 'Ladakh', 'Lakshadweep',
+        'Madhya Pradesh', 'Maharashtra', 'Manipur', 'Meghalaya', 'Mizoram',
+        'Nagaland', 'Odisha', 'Puducherry', 'Punjab', 'Rajasthan',
+        'Sikkim', 'Tamil Nadu', 'Telangana', 'Tripura', 'Uttar Pradesh',
+        'Uttarakhand', 'West Bengal'),key='W')
     app_opening=Data_Aggregated_User_Summary_df.groupby(['State','Year'])
     a_state=app_opening.sum()
     la=Data_Aggregated_User_Summary_df['State'] +"-"+ Data_Aggregated_User_Summary_df["Year"].astype(str)
@@ -397,21 +399,23 @@ with tab2:
     with col2:
         state = st.selectbox(
         'Please select the State',
-        ('andaman-&-nicobar-islands', 'andhra-pradesh', 'arunachal-pradesh',
-        'assam', 'bihar', 'chandigarh', 'chhattisgarh',
-        'dadra-&-nagar-haveli-&-daman-&-diu', 'delhi', 'goa', 'gujarat',
-        'haryana', 'himachal-pradesh', 'jammu-&-kashmir',
-        'jharkhand', 'karnataka', 'kerala', 'ladakh', 'lakshadweep',
-        'madhya-pradesh', 'maharashtra', 'manipur', 'meghalaya', 'mizoram',
-        'nagaland', 'odisha', 'puducherry', 'punjab', 'rajasthan',
-        'sikkim', 'tamil-nadu', 'telangana', 'tripura', 'uttar-pradesh',
-        'uttarakhand', 'west-bengal'),key='dk2')
+        ('Andaman & Nicobar Islands', 'Andhra Pradesh', 'Arunachal Pradesh',
+        'Assam', 'Bihar', 'Chandigarh', 'Chhattisgarh',
+        'Dadra & Nagar Haveli & Daman & Diu', 'Delhi', 'Goa', 'Gujarat',
+        'Haryana', 'Himachal Pradesh', 'Jammu & Kashmir',
+        'Jharkhand', 'Karnataka', 'Kerala', 'Ladakh', 'Lakshadweep',
+        'Madhya Pradesh', 'Maharashtra', 'Manipur', 'Meghalaya', 'Mizoram',
+        'Nagaland', 'Odisha', 'Puducherry', 'Punjab', 'Rajasthan',
+        'Sikkim', 'Tamil Nadu', 'Telangana', 'Tripura', 'Uttar Pradesh',
+        'Uttarakhand', 'West Bengal'),key='dk2')
     with col3:
         Quarter = st.selectbox(
             'Please select the Quarter',
-            ('1', '2', '3','4'),key='qwe2')
+            ('Q1 (Jan-Mar)', 'Q2 (Apr-Jun)', 'Q3 (Jul-Sep)','Q4 (Oct-Dec)'),key='qwe2')
+    string_value = Quarter
+    quarter= int(''.join(filter(str.isdigit, string_value)))
     districts=Data_Map_User_Table.loc[(Data_Map_User_Table['State'] == state ) & (Data_Map_User_Table['Year']==int(Year))
-                                          & (Data_Map_User_Table['Quarter']==int(Quarter))]
+                                          & (Data_Map_User_Table['Quarter']==quarter)]
     l=len(districts)    
     fig = px.bar(districts, x='Place_Name', y='App_Openings',color="App_Openings",
                  color_continuous_scale="reds")   
@@ -447,15 +451,15 @@ with tab3:
     with col1:
         state = st.selectbox(
         'Please select the State',
-        ('india','andaman-&-nicobar-islands', 'andhra-pradesh', 'arunachal-pradesh',
-        'assam', 'bihar', 'chandigarh', 'chhattisgarh',
-        'dadra-&-nagar-haveli-&-daman-&-diu', 'delhi', 'goa', 'gujarat',
-        'haryana', 'himachal-pradesh', 'jammu-&-kashmir',
-        'jharkhand', 'karnataka', 'kerala', 'ladakh', 'lakshadweep',
-        'madhya-pradesh', 'maharashtra', 'manipur', 'meghalaya', 'mizoram',
-        'nagaland', 'odisha', 'puducherry', 'punjab', 'rajasthan',
-        'sikkim', 'tamil-nadu', 'telangana', 'tripura', 'uttar-pradesh',
-        'uttarakhand', 'west-bengal'),key='Z')
+        ('Andaman & Nicobar Islands', 'Andhra Pradesh', 'Arunachal Pradesh',
+        'Assam', 'Bihar', 'Chandigarh', 'Chhattisgarh',
+        'Dadra & Nagar Haveli & Daman & Diu', 'Delhi', 'Goa', 'Gujarat',
+        'Haryana', 'Himachal Pradesh', 'Jammu & Kashmir',
+        'Jharkhand', 'Karnataka', 'Kerala', 'Ladakh', 'Lakshadweep',
+        'Madhya Pradesh', 'Maharashtra', 'Manipur', 'Meghalaya', 'Mizoram',
+        'Nagaland', 'Odisha', 'Puducherry', 'Punjab', 'Rajasthan',
+        'Sikkim', 'Tamil Nadu', 'Telangana', 'Tripura', 'Uttar Pradesh',
+        'Uttarakhand', 'West Bengal'),key='Z')
     with col2:
         Y = st.selectbox(
         'Please select the Year',
@@ -556,9 +560,11 @@ with c1:
 with c2:
     Quarter = st.selectbox(
             'Please select the Quarter',
-            ('1', '2', '3','4'),key='qgwe2')
+            ('Q1 (Jan-Mar)', 'Q2 (Apr-Jun)', 'Q3 (Jul-Sep)','Q4 (Oct-Dec)'),key='qgwe2')
+string_value = Quarter
+quarter= int(''.join(filter(str.isdigit, string_value)))
 Data_Map_User_df=Data_Aggregated_User_Summary_df.copy() 
-top_states=Data_Map_User_df.loc[(Data_Map_User_df['Year'] == int(Year)) & (Data_Map_User_df['Quarter'] ==int(Quarter))]
+top_states=Data_Map_User_df.loc[(Data_Map_User_df['Year'] == int(Year)) & (Data_Map_User_df['Quarter'] ==quarter)]
 top_states_r = top_states.sort_values(by=['Registered_Users'], ascending=False)
 top_states_a = top_states.sort_values(by=['AppOpenings'], ascending=False) 
 
