@@ -130,9 +130,11 @@ with colT2:
     """
     <div style="color: white;">
     <h3><span style="color: white;">Details of Map:</span></h3>
-    - The darkness of each state's color represents the total transactions.
-    - The size of the circles on the map corresponds to the total transactions in each district. The bigger the circle, the higher the transactions.
-    - Hovering over the data on the map shows details like the total transactions and amount.
+    <ul>
+    <li>The darkness of each state's color represents the total transactions.</li>
+    <li>The size of the circles on the map corresponds to the total transactions in each district. The bigger the circle, the higher the transactions.</li>
+    <li>Hovering over the data on the map shows details like the total transactions and amount.</li>
+    </ul>
     </div>
     """,
     unsafe_allow_html=True
@@ -142,9 +144,11 @@ with colT2:
     """
     <div style="color: white;">
     <h3><span style="color: white;">Important Observations:</span></h3>
-    - Users can view PhonePe transactions both statewide and districtwise.
-    - The map clearly shows which states have the highest transactions during the given year and quarter.
-    - The map provides a basic understanding of transactions in different districts.
+    <ul>
+    <li>Users can view PhonePe transactions both statewide and districtwise.</li>
+    <li>The map clearly shows which states have the highest transactions during the given year and quarter.</li>
+    <li>The map provides a basic understanding of transactions in different districts.</li>
+    </ul>
     </div>
     """,
     unsafe_allow_html=True
@@ -205,9 +209,11 @@ with tab1:
         """
         <div style="color: white;">
         <h3><span style="color: white;"> Details of BarGraph:</span></h3>
-        - The data pertains to a specific state selected by you.
-        - The X axis represents all years with all quarters.
-        - The Y axis represents the total transactions in the selected mode.     
+        <ul>
+        <li>The data pertains to a specific state selected by you.</li>
+        <li>The X axis represents all years with all quarters.</li>
+        <li>The Y axis represents the total transactions in the selected mode.</li>     
+        </ul>
         </div>
         """,
         unsafe_allow_html=True
@@ -216,9 +222,11 @@ with tab1:
         """
         <div style="color: white;">
         <h3><span style="color: white;"> Important Observations:</span></h3>
-        - The data visualizes the pattern of payment modes in a state over time.
-        - Users can analyze the Y-axis data to understand which modes of payments are increasing or decreasing in the state. An upward trend in the Y-axis data for a particular payment mode indicates an increase in usage. A downward trend in the Y-axis data for a particular payment mode indicates a decrease in usage.
-        - Observing these patterns over time can provide insights into the changing payment behavior of people in the state.
+        <ul>
+        <li>The data visualizes the pattern of payment modes in a state over time.</li>
+        <li>Users can analyze the Y-axis data to understand which modes of payments are increasing or decreasing in the state. An upward trend in the Y-axis data for a particular payment mode indicates an increase in usage. A downward trend in the Y-axis data for a particular payment mode indicates a decrease in usage.</li>
+        <li>Observing these patterns over time can provide insights into the changing payment behavior of people in the state.</li>
+        </ul>
         </div>
         """,
         unsafe_allow_html=True
@@ -260,9 +268,11 @@ with tab2:
         """
         <div style="color: white;">
         <h3><span style="color: white;"> Details of BarGraph:</span></h3>
-        - This entire data belongs to state selected by you
-        - X Axis represents the districts of selected state
-        - Y Axis represents total transactions        
+        <ul>
+        <li>This entire data belongs to state selected by you</li>
+        <li>X Axis represents the districts of selected state</li>
+        <li>Y Axis represents total transactions </li>    
+        </ul>
         </div>
         """,
         unsafe_allow_html=True
@@ -271,8 +281,10 @@ with tab2:
         """
         <div style="color: white;">
         <h3><span style="color: white;"> Important Observations:</span></h3>
-        - User can observe how transactions are happening in districts of a selected state 
-        - We can observe the leading distric in a state 
+        <ul>
+        <li>User can observe how transactions are happening in districts of a selected state </li>
+        <li>We can observe the leading distric in a state </li>
+        </ul>
         </div>
         """,
         unsafe_allow_html=True
@@ -312,9 +324,11 @@ with tab3:
         """
         <div style="color: white;">
         <h3><span style="color: white;"> Details of BarGraph:</span></h3>
-        - This entire data belongs to selected Year
-        - X Axis is all the states in increasing order of Total transactions
-        - Y Axis represents total transactions in selected mode        
+        <ul>
+        <li>This entire data belongs to selected Year</li>
+        <li>X Axis is all the states in increasing order of Total transactions</li>
+        <li>Y Axis represents total transactions in selected mode</li>
+        </ul>
         </div>
         """,
         unsafe_allow_html=True
@@ -323,9 +337,11 @@ with tab3:
         """
         <div style="color: white;">
         <h3><span style="color: white;"> Important Observations:</span></h3>
-        - We can observe the leading state with highest transactions in particular mode
-        - We get basic idea about regional performance of Phonepe
-        - Depending on the regional performance Phonepe can provide offers to particular place
+        <ul>
+        <li>We can observe the leading state with highest transactions in particular mode</li>
+        <li>We get basic idea about regional performance of Phonepe</li>
+        <li>Depending on the regional performance Phonepe can provide offers to particular place</li>
+        </ul>
         </div>
         """,
         unsafe_allow_html=True
@@ -350,9 +366,11 @@ with tab4:
         """
         <div style="color: white;">
         <h3><span style="color: white;"> Important Observations:</span></h3>
-        - Its very clearly understood that online transactions drasticall increased
-        - Initially in 2018,2019 the transactions are less but with time the online payments are increased at a high scale via PhonePe.
-        - We can clearly see that more than 50% of total Phonepe transactions in india happened are from the year 2022
+        <ul>
+        <li>Its very clearly understood that online transactions drasticall increased</li>
+        <li>Initially in 2018,2019 the transactions are less but with time the online payments are increased at a high scale via PhonePe.</li>
+        <li>We can clearly see that more than 50% of total Phonepe transactions in india happened are from the year 2022</li>
+        </ul>
         </div>
         """,
         unsafe_allow_html=True
@@ -404,9 +422,11 @@ with tab1:
         """
         <div style="color: white;">
         <h3><span style="color: white;"> Details of BarGraph:</span></h3>
-        - user need to select a state 
-        - The X Axis shows both Registered users and App openings 
-        - The Y Axis shows the Percentage of Registered users and App openings
+        <ul>
+        <li>user need to select a state </li>
+        <li>The X Axis shows both Registered users and App openings </li>
+        <li>The Y Axis shows the Percentage of Registered users and App openings</li>
+        </ul>
         </div>
         """,
         unsafe_allow_html=True
@@ -415,9 +435,11 @@ with tab1:
         """
         <div style="color: white;">
         <h3><span style="color: white;"> Important Observations:</span></h3>
-        - User can observe how the App Openings are growing and how Registered users are growing in a state
-        - We can clearly obseve these two parameters with time
-        - one can observe how user base is growing
+        <ul>
+        <li>User can observe how the App Openings are growing and how Registered users are growing in a state</li>
+        <li>We can clearly obseve these two parameters with time</li>
+        <li>one can observe how user base is growing</li>
+        </ul>
         </div>
         """,
         unsafe_allow_html=True
@@ -464,9 +486,11 @@ with tab2:
             """
             <div style="color: white;">
             <h3><span style="color: white;"> Details of BarGraph:</span></h3>
-            - This entire data belongs to state selected by you
-            - X Axis represents the districts of selected state
-            - Y Axis represents App Openings       
+            <ul>
+            <li>This entire data belongs to state selected by you</li>
+            <li>X Axis represents the districts of selected state</li>
+            <li>Y Axis represents App Openings</li>
+            </ul>
             </div>
             """,
             unsafe_allow_html=True
@@ -475,8 +499,10 @@ with tab2:
             """
             <div style="color: white;">
             <h3><span style="color: white;"> Important Observations:</span></h3>
-            - User can observe how App Openings are happening in districts of a selected state 
-            - We can observe the leading distric in a state 
+            <ul>
+            <li>User can observe how App Openings are happening in districts of a selected state </li>
+            <li>We can observe the leading distric in a state </li>
+            </ul>
             </div>
             """,
             unsafe_allow_html=True
@@ -522,9 +548,11 @@ with tab3:
         st.markdown(
         """
         <div style="color: white;">
-        <h3><span style="color: white;"> Details of Donut Chart: </span></h3>      
-        - Initially we select data by means of State and Year
-        - Percentage of registered users is represented with dounut chat through Device Brand
+        <h3><span style="color: white;"> Details of Donut Chart: </span></h3>   
+        <ul>
+        <li>Initially we select data by means of State and Year</li>
+        <li>Percentage of registered users is represented with dounut chat through Device Brand</li>
+        </ul>
         </div>
         """,
         unsafe_allow_html=True
@@ -533,10 +561,12 @@ with tab3:
         """
         <div style="color: white;">
         <h3><span style="color: white;"> Important Observations:</span></h3>
-        - User can observe the top leading brands in a particular state
-        - Brands with less users
-        - Brands with high users
-        - Can make app download advices to growing brands
+        <ul>
+        <li>User can observe the top leading brands in a particular state</li>
+        <li>Brands with less users</li>
+        <li>Brands with high users</li>
+        <li>Can make app download advices to growing brands</li>
+        </ul>
         </div>
         """,
         unsafe_allow_html=True
@@ -588,7 +618,9 @@ with tab3:
             """
             <div style="color: white;">
             <h3><span style="color: white;"> Important Observations:</span></h3>
-            -  We can see that the Registered Users and App openings are increasing year by year
+            <ul>
+            <li>We can see that the Registered Users and App openings are increasing year by year</li>
+            </ul>
             </div>
             """,
             unsafe_allow_html=True
@@ -629,23 +661,26 @@ table_style = '''
         text-align: left;
         padding: 8px;
         border-bottom: 1px solid #ddd;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
     }
     th {
         background-color: #f2f2f2;
+        font-weight: bold;
     }
     </style>
 '''
 # Displaying the tables with the updated style
 with col1:
-    rt=top_states_r[1:6]
+    rt = top_states_r[1:6]
     st.markdown("#### :blue[Registered Users]")
     st.markdown(table_style, unsafe_allow_html=True)
-    st.markdown(rt[[ 'State','Registered_Users']].style.hide(axis="index").render(), unsafe_allow_html=True)
+    st.markdown(rt[['State', 'Registered_Users']].style.hide_index().render(), unsafe_allow_html=True)
 with col2:
-    at=top_states_a[1:6]
+    at = top_states_a[1:6]
     st.markdown("#### :blue[PhonePe App Openings]")
     st.markdown(table_style, unsafe_allow_html=True)
-    st.markdown(at[['State','AppOpenings']].style.hide(axis="index").render(), unsafe_allow_html=True)
+    st.markdown(at[['State', 'AppOpenings']].style.hide_index().render(), unsafe_allow_html=True)
 with col3:
     st.markdown("#### :blue[Total Transactions]")
     st.markdown(table_style, unsafe_allow_html=True)
