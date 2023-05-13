@@ -8,7 +8,7 @@ from plotly.subplots import make_subplots
 warnings.filterwarnings("ignore")
 st.set_page_config(layout="wide", initial_sidebar_state="auto")
 
-@st.cache
+@st.cache_resource
 # Set the background color
 def set_background():
     # Add CSS to change the background color
