@@ -167,7 +167,7 @@ with tab1:
     Data_Aggregated_Transaction=Data_Aggregated_Transaction_df.copy()
     Data_Aggregated_Transaction.drop(Data_Aggregated_Transaction.index[(Data_Aggregated_Transaction["State"] == "india")],axis=0,inplace=True)
     State_PaymentMode=Data_Aggregated_Transaction.copy()
-    # st.write('### :green[State & PaymentMode]')
+    # st.write('### :white[State & PaymentMode]')
     col1, col2= st.columns(2)
     with col1:
         mode = st.selectbox(
@@ -279,7 +279,7 @@ with tab2:
         )
 # === T FIGURE3 YEAR ANALYSIS ===
 with tab3:
-    #st.write('### :green[PaymentMode and Year]')
+    #st.write('### :white[PaymentMode and Year]')
     col1, col2= st.columns(2)
     with col1:
         M = st.selectbox(
@@ -616,18 +616,41 @@ top_states_T=Data_Aggregated_Transaction_df.loc[(Data_Aggregated_Transaction_df[
 topst=top_states_T.groupby('State')
 x=topst.sum().sort_values(by=['Total_Transactions_count'], ascending=False)
 y=topst.sum().sort_values(by=['Total_Amount'], ascending=False)
+
 col1, col2, col3, col4= st.columns([2.5,2.5,2.5,2.5])
+# Style for the tables
+table_style = '''
+    <style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+    th, td {
+        text-align: left;
+        padding: 8px;
+        border-bottom: 1px solid #ddd;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+    </style>
+'''
+# Displaying the tables with the updated style
 with col1:
     rt=top_states_r[1:6]
     st.markdown("#### :blue[Registered Users]")
-    st.markdown(rt[[ 'State','Registered_Users']].style.hide(axis="index").to_html(), unsafe_allow_html=True)
+    st.markdown(table_style, unsafe_allow_html=True)
+    st.markdown(rt[[ 'State','Registered_Users']].style.hide(axis="index").render(), unsafe_allow_html=True)
 with col2:
     at=top_states_a[1:6]
     st.markdown("#### :blue[PhonePe App Openings]")
-    st.markdown(at[['State','AppOpenings']].style.hide(axis="index").to_html(), unsafe_allow_html=True)
+    st.markdown(table_style, unsafe_allow_html=True)
+    st.markdown(at[['State','AppOpenings']].style.hide(axis="index").render(), unsafe_allow_html=True)
 with col3:
     st.markdown("#### :blue[Total Transactions]")
+    st.markdown(table_style, unsafe_allow_html=True)
     st.write(x[['Total_Transactions_count']][1:6])
 with col4:
     st.markdown("#### :blue[Total Amount]")
-    st.write(y['Total_Amount'][1:6])      
+    st.markdown(table_style, unsafe_allow_html=True)
+    st.write(y['Total_Amount'][1:6])
