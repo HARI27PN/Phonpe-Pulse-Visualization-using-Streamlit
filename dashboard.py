@@ -201,7 +201,7 @@ with tab1:
         st.write('#### '+State.upper()) 
         st.plotly_chart(fig,use_container_width=True)
     with colT2:
-        st.info(
+        st.markdown(
         """
         <div style="color: white;">
         <h3><span style="color: white;"> Details of BarGraph:</span></h3>
@@ -212,7 +212,7 @@ with tab1:
         """,
         unsafe_allow_html=True
         )
-        st.info(
+        st.markdown(
         """
         <div style="color: white;">
         <h3><span style="color: white;"> Important Observations:</span></h3>
@@ -256,7 +256,7 @@ with tab2:
         st.write('#### '+state.upper()+' WITH '+str(l)+' DISTRICTS')
         st.plotly_chart(fig,use_container_width=True)
     with colT2:
-        st.info(
+        st.markdown(
         """
         <div style="color: white;">
         <h3><span style="color: white;"> Details of BarGraph:</span></h3>
@@ -267,7 +267,7 @@ with tab2:
         """,
         unsafe_allow_html=True
         )
-        st.info(
+        st.markdown(
         """
         <div style="color: white;">
         <h3><span style="color: white;"> Important Observations:</span></h3>
@@ -308,7 +308,7 @@ with tab3:
         st.write('#### '+str(Year)+' DATA ANALYSIS')
         st.plotly_chart(fig2,use_container_width=True) 
     with colT2:
-        st.info(
+        st.markdown(
         """
         <div style="color: white;">
         <h3><span style="color: white;"> Details of BarGraph:</span></h3>
@@ -319,7 +319,7 @@ with tab3:
         """,
         unsafe_allow_html=True
         )
-        st.info(
+        st.markdown(
         """
         <div style="color: white;">
         <h3><span style="color: white;"> Important Observations:</span></h3>
@@ -346,7 +346,7 @@ with tab4:
     with col2:  
         st.write('#### :green[Year Wise Transaction Analysis in INDIA]')      
         st.markdown(years_Table.style.hide(axis="index").to_html(), unsafe_allow_html=True)
-        st.info(
+        st.markdown(
         """
         <div style="color: white;">
         <h3><span style="color: white;"> Important Observations:</span></h3>
@@ -400,7 +400,7 @@ with tab1:
         st.write("#### ",state.upper())
         st.plotly_chart(fig, use_container_width=True, height=200)
     with colT2:
-        st.info(
+        st.markdown(
         """
         <div style="color: white;">
         <h3><span style="color: white;"> Details of BarGraph:</span></h3>
@@ -411,7 +411,7 @@ with tab1:
         """,
         unsafe_allow_html=True
         )
-        st.info(
+        st.markdown(
         """
         <div style="color: white;">
         <h3><span style="color: white;"> Important Observations:</span></h3>
@@ -460,7 +460,7 @@ with tab2:
 
     with colT2:
         if l:
-        st.info(
+        st.markdown(
         """
         <div style="color: white;">
         <h3><span style="color: white;"> Details of BarGraph:</span></h3>
@@ -471,7 +471,7 @@ with tab2:
         """,
         unsafe_allow_html=True
         )
-        st.info(
+        st.markdown(
         """
         <div style="color: white;">
         <h3><span style="color: white;"> Important Observations:</span></h3>
@@ -519,7 +519,7 @@ with tab3:
         st.write("#### ",state.upper()+' IN '+Y)
         st.plotly_chart(fig3, use_container_width=True)        
     with colT2:
-        st.info(
+        st.markdown(
         """
         <div style="color: white;">
         <h3><span style="color: white;"> Details of Donut Chart: </span></h3>      
@@ -529,7 +529,7 @@ with tab3:
         """,
         unsafe_allow_html=True
         )
-        st.info(
+        st.markdown(
         """
         <div style="color: white;">
         <h3><span style="color: white;"> Important Observations:</span></h3>
@@ -584,7 +584,7 @@ with tab3:
         with col2:  
             # st.write('#### :green[Year Wise Transaction Analysis in INDIA]')      
             st.markdown(years_Table.style.hide(axis="index").to_html(), unsafe_allow_html=True)
-            st.info(
+            st.markdown(
             """
             <div style="color: white;">
             <h3><span style="color: white;"> Important Observations:</span></h3>
