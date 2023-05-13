@@ -591,10 +591,6 @@ with tab3:
         fig1 = px.pie(years_Table, values='Registered_Users', names='year',color_discrete_sequence=px.colors.sequential.RdBu, title='TOTAL REGISTERED USERS (2018 TO 2022)')
         col1, col2= st.columns([0.6,0.4])
         with col1:
-            # st.write('### :green[Drastical Increase in Transactions :rocket:]')
-            labels = ["US", "China", "European Union", "Russian Federation", "Brazil", "India",
-                "Rest of World"]
-
             # Create subplots: use 'domain' type for Pie subplot
             fig = make_subplots(rows=1, cols=2, specs=[[{'type':'domain'}, {'type':'domain'}]])
             fig.add_trace(go.Pie(labels=years_Table['year'], values=years_Table['Registered_Users'], name="REGISTERED USERS"),
@@ -628,7 +624,7 @@ with tab3:
             )
 
             
-# TOP 3 STATES DATA
+# TOP 5 STATES DATA
 
 st.write('# :orange[TOP 5 STATE-WISE DATA]')
 c1,c2=st.columns(2)
