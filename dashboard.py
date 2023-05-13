@@ -460,27 +460,27 @@ with tab2:
 
     with colT2:
         if l:
-        st.markdown(
-        """
-        <div style="color: white;">
-        <h3><span style="color: white;"> Details of BarGraph:</span></h3>
-        - This entire data belongs to state selected by you
-        - X Axis represents the districts of selected state
-        - Y Axis represents App Openings       
-        </div>
-        """,
-        unsafe_allow_html=True
-        )
-        st.markdown(
-        """
-        <div style="color: white;">
-        <h3><span style="color: white;"> Important Observations:</span></h3>
-        - User can observe how App Openings are happening in districts of a selected state 
-        - We can observe the leading distric in a state 
-        </div>
-        """,
-        unsafe_allow_html=True
-        )
+            st.markdown(
+            """
+            <div style="color: white;">
+            <h3><span style="color: white;"> Details of BarGraph:</span></h3>
+            - This entire data belongs to state selected by you
+            - X Axis represents the districts of selected state
+            - Y Axis represents App Openings       
+            </div>
+            """,
+            unsafe_allow_html=True
+            )
+            st.markdown(
+            """
+            <div style="color: white;">
+            <h3><span style="color: white;"> Important Observations:</span></h3>
+            - User can observe how App Openings are happening in districts of a selected state 
+            - We can observe the leading distric in a state 
+            </div>
+            """,
+            unsafe_allow_html=True
+            )
 # === U YEAR ANALYSIS ===
 with tab3:
     st.write('### :orange[Brand Share] ')
