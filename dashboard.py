@@ -591,25 +591,22 @@ with tab3:
         fig1 = px.pie(years_Table, values='Registered_Users', names='year',color_discrete_sequence=px.colors.sequential.RdBu, title='TOTAL REGISTERED USERS (2018 TO 2022)')
         col1, col2= st.columns([0.6,0.4])
         with col1:
-            # Create subplots: use 'domain' type for Pie subplot
-            fig = make_subplots(rows=1, cols=2, specs=[[{'type':'domain'}, {'type':'domain'}]])
+            fig = make_subplots(rows=1, cols=2, specs=[[{'type':'domain'}, {'type':'domain'}]])    # use 'domain' type for Pie subplot
             fig.add_trace(go.Pie(labels=years_Table['year'], values=years_Table['Registered_Users'], name="REGISTERED USERS"),
                         1, 1)
             fig.add_trace(go.Pie(labels=years_Table['year'], values=years_Table['AppOpenings'], name="APP OPENINGS"),
                         1, 2)
 
-            # Use `hole` to create a donut-like pie chart
-            fig.update_traces(hole=.6, hoverinfo="label+percent+name")
+            fig.update_traces(hole=.6, hoverinfo="label+percent+name")   # Use `hole` to create a donut-like pie chart
 
             fig.update_layout(
                 title_text="USERS DATA (2018 TO 2022)",
                 # Add annotations in the center of the donut pies.
                 annotations=[dict(text='USERS', x=0.18, y=0.5, font_size=20, showarrow=False),
                             dict(text='APP', x=0.82, y=0.5, font_size=20, showarrow=False)])
-            # st.plotly_chart(fig1)
             st.plotly_chart(fig)
         with col2:  
-            # st.write('#### :green[Year Wise Transaction Analysis in INDIA]')      
+             
             st.markdown(years_Table.style.hide(axis="index").to_html(), unsafe_allow_html=True)
             st.markdown(
             """
