@@ -125,22 +125,34 @@ colT1,colT2 = st.columns([5,5])
 with colT1:
     st.plotly_chart(fig_ch, use_container_width=True)
 with colT2:
-    st.info(
+    st.markdown(
     """
-    Details of Map:
-    - The darkness of each state's color represents the total transactions.
-    - The size of the circles on the map corresponds to the total transactions in each district. The bigger the circle, the higher the transactions.
-    - Hovering over the data on the map shows details like the total transactions and amount.
+    <div class="colT2">
+    <h3>Details of Map:</h3>
+    <ul>
+    <li>The darkness of each state's color represents the total transactions.</li>
+    <li>The size of the circles on the map corresponds to the total transactions in each district. The bigger the circle, the higher the transactions.</li>
+    <li>Hovering over the data on the map shows details like the total transactions and amount.</li>
+    </ul>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+    st.markdown(
     """
-    )
-    st.info(
-    """
-    Important Observations:
-    - Users can view PhonePe transactions both statewide and districtwise.
-    - The map clearly shows which states have the highest transactions during the given year and quarter.
-    - The map provides a basic understanding of transactions in different districts.
-    """
-    )
+    <div class="colT2">
+    <h3>Important Observations:</h3>
+    <ul>
+    <li>Users can view PhonePe transactions both statewide and districtwise.</li>
+    <li>The map clearly shows which states have the highest transactions during the given year and quarter.</li>
+    <li>The map provides a basic understanding of transactions in different districts.</li>
+    </ul>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
 # -----------------------------------------------FIGURE2 BARGRAPH------------------------------------------------------------------------
 st.info('**:red[The bar graph below displays Indian states with the highest PhonePe transactions in increasing order for the same data.]**')
 Coropleth_Dataset = Coropleth_Dataset.sort_values(by=['Total_Transactions'])
