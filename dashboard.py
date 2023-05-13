@@ -122,7 +122,7 @@ fig_ch.update_geos(fitbounds="locations", visible=False,)
 fig_ch.add_trace( fig.data[0])
 fig_ch.add_trace(fig1.data[0])
 
-colT1,colT2 = st.columns([5,5])
+colT1,colT2 = st.columns([6,4])
 with colT1:
     st.plotly_chart(fig_ch, use_container_width=True)
 with colT2:
@@ -130,9 +130,9 @@ with colT2:
     """
     <div style="color: white;">
     <h3><span style="color: white;">Details of Map:</span></h3>
-    The darkness of each state's color represents the total transactions.
-    The size of the circles on the map corresponds to the total transactions in each district. The bigger the circle, the higher the transactions.
-    Hovering over the data on the map shows details like the total transactions and amount.
+    - The darkness of each state's color represents the total transactions.
+    - The size of the circles on the map corresponds to the total transactions in each district. The bigger the circle, the higher the transactions.
+    - Hovering over the data on the map shows details like the total transactions and amount.
     </div>
     """,
     unsafe_allow_html=True
@@ -142,9 +142,9 @@ with colT2:
     """
     <div style="color: white;">
     <h3><span style="color: white;">Important Observations:</span></h3>
-    Users can view PhonePe transactions both statewide and districtwise.
-    The map clearly shows which states have the highest transactions during the given year and quarter.
-    The map provides a basic understanding of transactions in different districts.
+    - Users can view PhonePe transactions both statewide and districtwise.
+    - The map clearly shows which states have the highest transactions during the given year and quarter.
+    - The map provides a basic understanding of transactions in different districts.
     </div>
     """,
     unsafe_allow_html=True
@@ -196,26 +196,32 @@ with tab1:
     fig = px.bar(State_PaymentMode, x='Year_Quarter', y='Total_Transactions_count',color="Total_Transactions_count",
                  color_continuous_scale="Viridis")
     
-    colT1,colT2 = st.columns([7,3])
+    colT1,colT2 = st.columns([6,4])
     with colT1:
         st.write('#### '+State.upper()) 
         st.plotly_chart(fig,use_container_width=True)
     with colT2:
         st.info(
         """
-        Details of BarGraph:
+        <div style="color: white;">
+        <h3><span style="color: white;"> Details of BarGraph:</span></h3>
         - The data pertains to a specific state selected by you.
         - The X axis represents all years with all quarters.
-        - The Y axis represents the total transactions in the selected mode.      
-        """
+        - The Y axis represents the total transactions in the selected mode.     
+        </div>
+        """,
+        unsafe_allow_html=True
         )
         st.info(
         """
-        Important Observations:
+        <div style="color: white;">
+        <h3><span style="color: white;"> Important Observations:</span></h3>
         - The data visualizes the pattern of payment modes in a state over time.
         - Users can analyze the Y-axis data to understand which modes of payments are increasing or decreasing in the state. An upward trend in the Y-axis data for a particular payment mode indicates an increase in usage. A downward trend in the Y-axis data for a particular payment mode indicates a decrease in usage.
         - Observing these patterns over time can provide insights into the changing payment behavior of people in the state.
-        """
+        </div>
+        """,
+        unsafe_allow_html=True
         )
 # === T FIGURE2 DISTRICTS ANALYSIS ===
 with tab2:
@@ -245,25 +251,31 @@ with tab2:
     l=len(districts)    
     fig = px.bar(districts, x='Place_Name', y='Total_Transactions_count',color="Total_Transactions_count",
                  color_continuous_scale="Viridis")   
-    colT1,colT2 = st.columns([7,3])
+    colT1,colT2 = st.columns([6,4])
     with colT1:
         st.write('#### '+state.upper()+' WITH '+str(l)+' DISTRICTS')
         st.plotly_chart(fig,use_container_width=True)
     with colT2:
         st.info(
         """
-        Details of BarGraph:
+        <div style="color: white;">
+        <h3><span style="color: white;"> Details of BarGraph:</span></h3>
         - This entire data belongs to state selected by you
         - X Axis represents the districts of selected state
         - Y Axis represents total transactions        
-        """
+        </div>
+        """,
+        unsafe_allow_html=True
         )
         st.info(
         """
-        Important Observations:
+        <div style="color: white;">
+        <h3><span style="color: white;"> Important Observations:</span></h3>
         - User can observe how transactions are happening in districts of a selected state 
         - We can observe the leading distric in a state 
-        """
+        </div>
+        """,
+        unsafe_allow_html=True
         )
 # === T FIGURE3 YEAR ANALYSIS ===
 with tab3:
@@ -291,26 +303,32 @@ with tab3:
     Year_PaymentMode_Table = Year_PaymentMode_Table.sort_values(by=['Total_Transactions_count'])
     fig2= px.bar(Year_PaymentMode_Table, x='states', y='Total_Transactions_count',color="Total_Transactions_count",
                 color_continuous_scale="Viridis",)   
-    colT1,colT2 = st.columns([7,3])
+    colT1,colT2 = st.columns([6,4])
     with colT1:
         st.write('#### '+str(Year)+' DATA ANALYSIS')
         st.plotly_chart(fig2,use_container_width=True) 
     with colT2:
         st.info(
         """
-        Details of BarGraph:
+        <div style="color: white;">
+        <h3><span style="color: white;"> Details of BarGraph:</span></h3>
         - This entire data belongs to selected Year
         - X Axis is all the states in increasing order of Total transactions
         - Y Axis represents total transactions in selected mode        
-        """
+        </div>
+        """,
+        unsafe_allow_html=True
         )
         st.info(
         """
-        Important Observations:
+        <div style="color: white;">
+        <h3><span style="color: white;"> Important Observations:</span></h3>
         - We can observe the leading state with highest transactions in particular mode
         - We get basic idea about regional performance of Phonepe
         - Depending on the regional performance Phonepe can provide offers to particular place
-        """
+        </div>
+        """,
+        unsafe_allow_html=True
         )
 # === FIGURE4 OVERALL ANALYSIS ===
 with tab4:    
@@ -321,7 +339,7 @@ with tab4:
     years_Table['year']=years_List
     total_trans=years_Table['Total_Transactions_count'].sum() # this data is used in sidebar    
     fig1 = px.pie(years_Table, values='Total_Transactions_count', names='year',color_discrete_sequence=px.colors.sequential.Viridis, title='TOTAL TRANSACTIONS (2018 TO 2022)')
-    col1, col2= st.columns([0.65,0.35])
+    col1, col2= st.columns([0.6,0.4])
     with col1:
         st.write('### :green[Drastical Increase in Transactions :rocket:]')
         st.plotly_chart(fig1)
@@ -330,11 +348,14 @@ with tab4:
         st.markdown(years_Table.style.hide(axis="index").to_html(), unsafe_allow_html=True)
         st.info(
         """
-        Important Observations:
+        <div style="color: white;">
+        <h3><span style="color: white;"> Important Observations:</span></h3>
         - Its very clearly understood that online transactions drasticall increased
         - Initially in 2018,2019 the transactions are less but with time the online payments are increased at a high scale via PhonePe.
         - We can clearly see that more than 50% of total Phonepe transactions in india happened are from the year 2022
-        """
+        </div>
+        """,
+        unsafe_allow_html=True
         )
 
         
@@ -374,26 +395,32 @@ with tab1:
     ])
     # Change the bar mode
     fig.update_layout(barmode='group')
-    colT1,colT2 = st.columns([7,3])
+    colT1,colT2 = st.columns([6,4])
     with colT1:
         st.write("#### ",state.upper())
         st.plotly_chart(fig, use_container_width=True, height=200)
     with colT2:
         st.info(
         """
-        Details of BarGraph:
+        <div style="color: white;">
+        <h3><span style="color: white;"> Details of BarGraph:</span></h3>
         - user need to select a state 
         - The X Axis shows both Registered users and App openings 
         - The Y Axis shows the Percentage of Registered users and App openings
-        """
+        </div>
+        """,
+        unsafe_allow_html=True
         )
         st.info(
         """
-        Important Observations:
+        <div style="color: white;">
+        <h3><span style="color: white;"> Important Observations:</span></h3>
         - User can observe how the App Openings are growing and how Registered users are growing in a state
         - We can clearly obseve these two parameters with time
         - one can observe how user base is growing
-        """
+        </div>
+        """,
+        unsafe_allow_html=True
         )
 # === U DISTRICT ANALYSIS ===
 with tab2:
@@ -423,7 +450,7 @@ with tab2:
     l=len(districts)    
     fig = px.bar(districts, x='Place_Name', y='App_Openings',color="App_Openings",
                  color_continuous_scale="reds")   
-    colT1,colT2 = st.columns([7,3])
+    colT1,colT2 = st.columns([6,4])
     with colT1:
         if l:
             st.write('#### '+state.upper()+' WITH '+str(l)+' DISTRICTS')
@@ -433,21 +460,27 @@ with tab2:
 
     with colT2:
         if l:
-            st.info(
+        st.info(
         """
-        Details of BarGraph:
+        <div style="color: white;">
+        <h3><span style="color: white;"> Details of BarGraph:</span></h3>
         - This entire data belongs to state selected by you
         - X Axis represents the districts of selected state
         - Y Axis represents App Openings       
+        </div>
+        """,
+        unsafe_allow_html=True
+        )
+        st.info(
         """
-            )
-            st.info(
-        """
-        Important Observations:
+        <div style="color: white;">
+        <h3><span style="color: white;"> Important Observations:</span></h3>
         - User can observe how App Openings are happening in districts of a selected state 
         - We can observe the leading distric in a state 
-        """
-            )
+        </div>
+        """,
+        unsafe_allow_html=True
+        )
 # === U YEAR ANALYSIS ===
 with tab3:
     st.write('### :orange[Brand Share] ')
@@ -481,26 +514,32 @@ with tab3:
     values = b['Registered_Users_Count'] # customdata=labels,
     fig3 = go.Figure(data=[go.Pie(labels=labels, values=values, hole=.4,textinfo='label+percent',texttemplate='%{label}<br>%{percent:1%f}',insidetextorientation='horizontal',textfont=dict(color='#000000'),marker_colors=px.colors.qualitative.Prism)])
     
-    colT1,colT2 = st.columns([7,3])
+    colT1,colT2 = st.columns([6,4])
     with colT1:
         st.write("#### ",state.upper()+' IN '+Y)
         st.plotly_chart(fig3, use_container_width=True)        
     with colT2:
         st.info(
         """
-        Details of Donut Chart:        
+        <div style="color: white;">
+        <h3><span style="color: white;"> Details of Donut Chart: </span></h3>      
         - Initially we select data by means of State and Year
         - Percentage of registered users is represented with dounut chat through Device Brand
-        """
+        </div>
+        """,
+        unsafe_allow_html=True
         )
         st.info(
         """
-        Important Observations:
+        <div style="color: white;">
+        <h3><span style="color: white;"> Important Observations:</span></h3>
         - User can observe the top leading brands in a particular state
         - Brands with less users
         - Brands with high users
         - Can make app download advices to growing brands
-        """
+        </div>
+        """,
+        unsafe_allow_html=True
         )
 
     b = b.sort_values(by=['Registered_Users_Count'])
@@ -519,7 +558,7 @@ with tab3:
         years_Table['year']=years_List
         total_trans=years_Table['Registered_Users'].sum() # this data is used in sidebar    
         fig1 = px.pie(years_Table, values='Registered_Users', names='year',color_discrete_sequence=px.colors.sequential.RdBu, title='TOTAL REGISTERED USERS (2018 TO 2022)')
-        col1, col2= st.columns([0.7,0.3])
+        col1, col2= st.columns([0.6,0.4])
         with col1:
             # st.write('### :green[Drastical Increase in Transactions :rocket:]')
             labels = ["US", "China", "European Union", "Russian Federation", "Brazil", "India",
@@ -547,9 +586,12 @@ with tab3:
             st.markdown(years_Table.style.hide(axis="index").to_html(), unsafe_allow_html=True)
             st.info(
             """
-            Important Observation:
+            <div style="color: white;">
+            <h3><span style="color: white;"> Important Observations:</span></h3>
             -  We can see that the Registered Users and App openings are increasing year by year
-            """
+            </div>
+            """,
+            unsafe_allow_html=True
             )
 
             
