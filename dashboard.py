@@ -67,7 +67,7 @@ Total_Transaction=[]
 for i in Transaction_scatter_districts['Total_Transactions_count']:
     Total_Transaction.append(i)
 Scatter_Geo_Dataset['Total_Transactions']=Total_Transaction
-Scatter_Geo_Dataset['Year_Quarter']=str(year)+'-Q'+str(quarter)
+Scatter_Geo_Dataset['Year_Quarter']=str(year)+'-Q'+str(quarter)        # 2018-Q1
 # Dynamic Coropleth
 Coropleth_Dataset = Coropleth_Dataset.sort_values(by=['state'], ascending=False)
 Transaction_Coropleth_States = Transaction_Coropleth_States.sort_values(by=['Place_Name'], ascending=False)
