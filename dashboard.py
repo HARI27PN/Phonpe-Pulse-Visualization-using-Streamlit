@@ -90,9 +90,9 @@ Indian_States['Year_Quarter']=str(year)+'-Q'+str(quarter)
 fig=px.scatter_geo(Indian_States,
                     lon=Indian_States['Longitude'],
                     lat=Indian_States['Latitude'],                                
-                    text = Indian_States['code'], #It will display district names on map
+                    text = Indian_States['code'],  #'code' column is displayed as text on the map
                     hover_name="state", 
-                    hover_data=['Total_Amount',"Total_Transactions","Year_Quarter"],
+                    hover_data=['Total_Amount',"Total_Transactions"],
                     )
 fig.update_traces(marker=dict(color="white" ,size=0.3))
 fig.update_geos(fitbounds="locations", visible=False,)
@@ -103,9 +103,8 @@ fig1=px.scatter_geo(Scatter_Geo_Dataset,
                     lat=Scatter_Geo_Dataset['Latitude'],
                     color=Scatter_Geo_Dataset['col'],
                     size=Scatter_Geo_Dataset['Total_Transactions'],     
-                    #text = Scatter_Geo_Dataset['District'], #It will display district names on map
                     hover_name="District", 
-                    hover_data=["State", "Total_Amount","Total_Transactions","Year_Quarter"],
+                    hover_data=["State", "Total_Amount","Total_Transactions"],
                     title='District',
                     size_max=22,)
 fig1.update_traces(marker=dict(color="forestgreen" ,line_width=1))    #rebeccapurple
