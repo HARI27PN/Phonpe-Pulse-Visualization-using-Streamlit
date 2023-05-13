@@ -129,12 +129,10 @@ with colT2:
     st.markdown(
     """
     <div style="color: white;">
-    <h3>Details of Map:</h3>
-    <ul>
-    <li>The darkness of each state's color represents the total transactions.</li>
-    <li>The size of the circles on the map corresponds to the total transactions in each district. The bigger the circle, the higher the transactions.</li>
-    <li>Hovering over the data on the map shows details like the total transactions and amount.</li>
-    </ul>
+    <h3><span style="color: white;">Details of Map:</span></h3>
+    The darkness of each state's color represents the total transactions.
+    The size of the circles on the map corresponds to the total transactions in each district. The bigger the circle, the higher the transactions.
+    Hovering over the data on the map shows details like the total transactions and amount.
     </div>
     """,
     unsafe_allow_html=True
@@ -143,12 +141,10 @@ with colT2:
     st.markdown(
     """
     <div style="color: white;">
-    <h3>Important Observations:</h3>
-    <ul>
-    <li>Users can view PhonePe transactions both statewide and districtwise.</li>
-    <li>The map clearly shows which states have the highest transactions during the given year and quarter.</li>
-    <li>The map provides a basic understanding of transactions in different districts.</li>
-    </ul>
+    <h3><span style="color: white;">Important Observations:</span></h3>
+    Users can view PhonePe transactions both statewide and districtwise.
+    The map clearly shows which states have the highest transactions during the given year and quarter.
+    The map provides a basic understanding of transactions in different districts.
     </div>
     """,
     unsafe_allow_html=True
@@ -180,15 +176,15 @@ with tab1:
     with col2:
         state = st.selectbox(
         'Please select the State',
-        ('andaman & nicobar islands', 'andhra pradesh', 'arunachal pradesh',
+        ('andaman-&-nicobar-islands', 'andhra-pradesh', 'arunachal-pradesh',
         'assam', 'bihar', 'chandigarh', 'chhattisgarh',
-        'dadra & nagar haveli & daman & diu', 'delhi', 'goa', 'gujarat',
-        'haryana', 'himachal pradesh', 'jammu & kashmir',
+        'dadra-&-nagar-haveli-&-daman-&-diu', 'delhi', 'goa', 'gujarat',
+        'haryana', 'himachal-pradesh', 'jammu-&-kashmir',
         'jharkhand', 'karnataka', 'kerala', 'ladakh', 'lakshadweep',
-        'madhya pradesh', 'maharashtra', 'manipur', 'meghalaya', 'mizoram',
+        'madhya-pradesh', 'maharashtra', 'manipur', 'meghalaya', 'mizoram',
         'nagaland', 'odisha', 'puducherry', 'punjab', 'rajasthan',
-        'sikkim', 'tamil nadu', 'telangana', 'tripura', 'uttar pradesh',
-        'uttarakhand', 'west bengal'),key='b')
+        'sikkim', 'tamil-nadu', 'telangana', 'tripura', 'uttar-pradesh',
+        'uttarakhand', 'west-bengal'),key='b')
     State= state
     Year_List=[2018,2019,2020,2021,2022]
     Mode=mode
