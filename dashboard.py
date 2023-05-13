@@ -157,7 +157,7 @@ with colT2:
 st.info('**:red[The bar graph below displays Indian states with the highest PhonePe transactions in increasing order for the same data.]**')
 Coropleth_Dataset = Coropleth_Dataset.sort_values(by=['Total_Transactions'])
 fig = px.bar(Coropleth_Dataset, x='state', y='Total_Transactions', title=str(year)+" Quarter-"+str(quarter))
-fig.update_layout(title_font=dict(size=27, color='blue'))
+fig.update_layout(title_font=dict(size=24, color='blue'))
 st.plotly_chart(fig, use_container_width=True)
 
 
