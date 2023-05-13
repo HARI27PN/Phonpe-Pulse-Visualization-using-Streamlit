@@ -80,7 +80,8 @@ for i in Transaction_Coropleth_States['Total_Transactions_count']:
     Total_Transaction.append(i)
 Coropleth_Dataset['Total_Transactions']=Total_Transaction
 
-# -------------------------------------FIGURE1 INDIA MAP------------------------------------------------------------------
+# FIGURE1 INDIA MAP
+
 #scatter plotting the states codes 
 Indian_States = Indian_States.sort_values(by=['state'], ascending=False)
 Indian_States['Registered_Users']=Coropleth_Dataset['Registered_Users']
@@ -153,7 +154,8 @@ with colT2:
     unsafe_allow_html=True
     )
 
-# -----------------------------------------------FIGURE2 BARGRAPH------------------------------------------------------------------------
+# FIGURE-2 BARGRAPH
+
 st.info('**:red[The bar graph below displays Indian states with the highest PhonePe transactions in increasing order for the same data.]**')
 Coropleth_Dataset = Coropleth_Dataset.sort_values(by=['Total_Transactions'])
 fig = px.bar(Coropleth_Dataset, x='state', y='Total_Transactions', title=str(year)+" Quarter-"+str(quarter))
@@ -165,7 +167,7 @@ st.plotly_chart(fig, use_container_width=True)
 
 st.write('# :orange[TRANSACTIONS ANALYSIS]')
 tab1, tab2, tab3, tab4 = st.tabs(["STATE ANALYSIS", "DISTRICT ANALYSIS", "YEAR ANALYSIS", "OVERALL ANALYSIS"])
-# === T FIGURE1 STATE ANALYSIS ===
+# === Tab1 STATE ANALYSIS ===
 with tab1:
     Data_Aggregated_Transaction=Data_Aggregated_Transaction_df.copy()
     Data_Aggregated_Transaction.drop(Data_Aggregated_Transaction.index[(Data_Aggregated_Transaction["State"] == "india")],axis=0,inplace=True)
@@ -230,7 +232,7 @@ with tab1:
         """,
         unsafe_allow_html=True
         )
-# === T FIGURE2 DISTRICTS ANALYSIS ===
+# === Tab2 DISTRICTS ANALYSIS ===
 with tab2:
     col1, col2, col3= st.columns(3)
     with col1:
@@ -288,7 +290,7 @@ with tab2:
         """,
         unsafe_allow_html=True
         )
-# === T FIGURE3 YEAR ANALYSIS ===
+# === Tab3 YEAR ANALYSIS ===
 with tab3:
     #st.write('### :white[PaymentMode and Year]')
     col1, col2= st.columns(2)
@@ -345,7 +347,7 @@ with tab3:
         """,
         unsafe_allow_html=True
         )
-# === FIGURE4 OVERALL ANALYSIS ===
+# === Tab4 OVERALL ANALYSIS ===
 with tab4:    
     years=Data_Aggregated_Transaction.groupby('Year')
     years_List=Data_Aggregated_Transaction['Year'].unique()
