@@ -127,7 +127,7 @@ with colT1:
 with colT2:
     st.markdown(
     """
-    <div class="colT2">
+    <div style="color: white;">
     <h3>Details of Map:</h3>
     <ul>
     <li>The darkness of each state's color represents the total transactions.</li>
@@ -137,11 +137,11 @@ with colT2:
     </div>
     """,
     unsafe_allow_html=True
-)
+    )
 
     st.markdown(
     """
-    <div class="colT2">
+    <div style="color: white;">
     <h3>Important Observations:</h3>
     <ul>
     <li>Users can view PhonePe transactions both statewide and districtwise.</li>
@@ -151,7 +151,7 @@ with colT2:
     </div>
     """,
     unsafe_allow_html=True
-)
+    )
 
 # -----------------------------------------------FIGURE2 BARGRAPH------------------------------------------------------------------------
 st.info('**:red[The bar graph below displays Indian states with the highest PhonePe transactions in increasing order for the same data.]**')
