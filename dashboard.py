@@ -690,3 +690,25 @@ with col4:
     st.markdown("#### :blue[Total Amount]")
     st.markdown(table_style, unsafe_allow_html=True)
     st.write(y['Total_Amount'][1:6])
+
+    
+# Getting Secrets from Streamlit Secret File
+# username=st.secrets['AWS_RDS_username']
+# password=st.secrets['AWS_RDS_password']
+# Endpoint=st.secrets['Endpoint']
+
+# # CONNECTED TO (AWS)Amazon-Web-Services ----> (RDS)Relational-Database-Service 
+# conn=pymysql.connect(
+#     host=Endpoint,
+#     user=username,
+#     password=password
+# )
+
+# # USING PhonepeDB I HAVE CREATED IN DATABASE-INSTANCE OF RDS
+# mycursor=conn.cursor()
+# sql='''USE PhonepeDB'''
+# mycursor.execute(sql)
+
+# # RETRIEVING DATA FROM CLOUD DATABASE
+# query = 'select * from Longitude_Latitude_State_Table'
+# Indian_States = pd.read_sql(query, con = conn)
