@@ -383,7 +383,7 @@ with tab4:
 st.write('# :orange[USERS DATA ANALYSIS ]')
 tab1, tab2, tab3, tab4 = st.tabs(["STATE ANALYSIS", "DISTRICT ANALYSIS","YEAR ANALYSIS","OVERALL ANALYSIS"])
 
-# === U STATE ANALYSIS ===
+# === U1 STATE ANALYSIS ===
 with tab1:
     st.write('### :blue[State & Userbase]')
     state = st.selectbox(
@@ -401,7 +401,7 @@ with tab1:
     a_state=app_opening.sum()
     la=Data_Aggregated_User_Summary_df['State'] +"-"+ Data_Aggregated_User_Summary_df["Year"].astype(str)
     a_state["state_year"] = la.unique()
-    sta=a_state["state_year"].str[:-5]
+    sta=a_state["state_year"].str[:-5]      # extracts only the state
     a_state["state"] = sta
     sout=a_state.loc[(a_state['state'] == state) ]
     ta=sout['AppOpenings'].sum()
@@ -445,7 +445,7 @@ with tab1:
         """,
         unsafe_allow_html=True
         )
-# === U DISTRICT ANALYSIS ===
+# === U2 DISTRICT ANALYSIS ===
 with tab2:
     col1, col2, col3= st.columns(3)
     with col1:
@@ -508,7 +508,7 @@ with tab2:
             """,
             unsafe_allow_html=True
             )
-# === U YEAR ANALYSIS ===
+# === U3 YEAR ANALYSIS ===
 with tab3:
     st.write('### :orange[Brand Share] ')
     col1, col2= st.columns(2)
@@ -580,7 +580,7 @@ with tab3:
     with st.expander("See Bar graph for the same data"):
         st.plotly_chart(fig4,use_container_width=True) 
         
-# === U OVERALL ANALYSIS ===
+# === U4 OVERALL ANALYSIS ===
     with tab4:
         years=Data_Aggregated_User_Summary_df.groupby('Year')
         years_List=Data_Aggregated_User_Summary_df['Year'].unique()
