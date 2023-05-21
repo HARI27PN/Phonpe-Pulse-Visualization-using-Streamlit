@@ -673,14 +673,13 @@ with col1:
 with col2:
     at = top_states_a[1:6]
     st.markdown("#### :blue[PhonePe App Openings]")
-    st.dataframe(at[['State', 'AppOpenings']], index=False))
+    st.dataframe(at[['State', 'AppOpenings']], index=False)
 with col3:
     st.markdown("#### :blue[Total Transactions]")
-    st.dataframe(x[['Total_Transactions_count']][1:6], index=False))
+    st.dataframe(x[['Total_Transactions_count']][1:6], index=False)
 with col4:
     st.markdown("#### :blue[Total Amount]")
-    st.markdown(table_style, unsafe_allow_html=True)
-    st.write(y['Total_Amount'][1:6])
+    st.dataframe(y['Total_Amount'][1:6], index=False)
 
     
 # Getting Secrets from Streamlit Secret File
