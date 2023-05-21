@@ -670,12 +670,12 @@ with col1:
     rt = top_states_r[1:6]
     st.markdown("#### :blue[Registered Users]")
     st.markdown(table_style, unsafe_allow_html=True)
-    st.markdown(rt[['State', 'Registered_Users']].style.hide_index().render(), unsafe_allow_html=True)
+    st.markdown(rt[['State', 'Registered_Users']].render(), unsafe_allow_html=True)
 with col2:
     at = top_states_a[1:6]
     st.markdown("#### :blue[PhonePe App Openings]")
     st.markdown(table_style, unsafe_allow_html=True)
-    st.markdown(at[['State', 'AppOpenings']].style.hide_index().render(), unsafe_allow_html=True)
+    st.markdown(at[['State', 'AppOpenings']].render(), unsafe_allow_html=True)
 with col3:
     st.markdown("#### :blue[Total Transactions]")
     st.markdown(table_style, unsafe_allow_html=True)
