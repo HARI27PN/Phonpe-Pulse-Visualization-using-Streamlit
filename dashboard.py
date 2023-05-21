@@ -669,14 +669,14 @@ table_style = '''
 with col1:
     rt = top_states_r[1:6]
     st.markdown("#### :blue[Registered Users]")
-    st.dataframe(rt[['State', 'Registered_Users']])
+    st.dataframe(rt[['State', 'Registered_Users']], index=False)
 with col2:
     at = top_states_a[1:6]
     st.markdown("#### :blue[PhonePe App Openings]")
-    st.dataframe(at[['State', 'AppOpenings']])
+    st.dataframe(at[['State', 'AppOpenings']], index=False))
 with col3:
     st.markdown("#### :blue[Total Transactions]")
-    st.dataframe(x[['Total_Transactions_count']][1:6])
+    st.dataframe(x[['Total_Transactions_count']][1:6], index=False))
 with col4:
     st.markdown("#### :blue[Total Amount]")
     st.markdown(table_style, unsafe_allow_html=True)
