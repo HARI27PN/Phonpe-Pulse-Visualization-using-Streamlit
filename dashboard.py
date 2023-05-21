@@ -669,17 +669,17 @@ table_style = '''
 with col1:
     rt = top_states_r[1:6]
     st.markdown("#### :blue[Registered Users]")
-    st.dataframe(rt[['State', 'Registered_Users']], index=False)
+    st.dataframe(rt[['State', 'Registered_Users']])
 with col2:
     at = top_states_a[1:6]
     st.markdown("#### :blue[PhonePe App Openings]")
-    st.dataframe(at[['State', 'AppOpenings']], index=False)
+    st.dataframe(at[['State', 'AppOpenings']])
 with col3:
     st.markdown("#### :blue[Total Transactions]")
-    st.dataframe(x[['Total_Transactions_count']][1:6], index=False)
+    st.dataframe(x[['Total_Transactions_count']][1:6])
 with col4:
     st.markdown("#### :blue[Total Amount]")
-    st.dataframe(y['Total_Amount'][1:6], index=False)
+    st.dataframe(y['Total_Amount'][1:6])
 
     
 # Getting Secrets from Streamlit Secret File
