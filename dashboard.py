@@ -676,8 +676,7 @@ with col2:
     st.dataframe(at[['State', 'AppOpenings']])
 with col3:
     st.markdown("#### :blue[Total Transactions]")
-    st.markdown(table_style, unsafe_allow_html=True)
-    st.write(x[['Total_Transactions_count']][1:6])
+    st.dataframe(x[['Total_Transactions_count']][1:6])
 with col4:
     st.markdown("#### :blue[Total Amount]")
     st.markdown(table_style, unsafe_allow_html=True)
