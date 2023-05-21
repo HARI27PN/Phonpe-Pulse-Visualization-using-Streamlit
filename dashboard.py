@@ -666,11 +666,11 @@ table_style = '''
     </style>
 '''
 # Displaying the tables with the updated style
+
 with col1:
     rt = top_states_r[1:6]
     st.markdown("#### :blue[Registered Users]")
-    st.markdown(table_style, unsafe_allow_html=True)
-    st.markdown(rt[['State', 'Registered_Users']], unsafe_allow_html=True)
+    st.dataframe(rt[['State', 'Registered_Users']])
 with col2:
     at = top_states_a[1:6]
     st.markdown("#### :blue[PhonePe App Openings]")
