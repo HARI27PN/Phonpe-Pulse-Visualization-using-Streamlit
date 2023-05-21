@@ -667,11 +667,11 @@ table_style = '''
 '''
 # Displaying the tables with the updated style
 with col1:
-    rt = top_states_r[1:6].set_index('State')
+    rt = top_states_r[1:6]
     st.markdown("#### :blue[Registered Users]")
     st.dataframe(rt[['State', 'Registered_Users']])
 with col2:
-    at = top_states_a[1:6].set_index('State')
+    at = top_states_a[1:6]
     st.markdown("#### :blue[PhonePe App Openings]")
     st.dataframe(at[['State', 'AppOpenings']])
 with col3:
